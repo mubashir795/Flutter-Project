@@ -8,12 +8,12 @@ void main() {
 
     ),
     debugShowCheckedModeBanner: false,
-    home: step(),
+    home: step_two(),
   ));
 
 }
 
-class step extends StatelessWidget {
+class step_two extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,7 +35,7 @@ class step extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(height: 100,),
-              Text("What's your Birthday?",
+              Text("What's your mobile number?",
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.w700,
@@ -46,7 +46,7 @@ class step extends StatelessWidget {
                       height: 10,
 
                     ),
-                    Text('Choos your date of birth. You can always make this private later.',
+                    Text('Enter the mobile number where you can be contacted. No one will see this on your profile.',
                     style: TextStyle(
                       color: Colors.black,
                       fontSize: 14,
@@ -54,18 +54,7 @@ class step extends StatelessWidget {
                       
                     ),
                     ),
-                    SizedBox(
-                      height: 10,
-
-                    ),
-                    Text('Why do I need to provider my birthday?',
-                    style: TextStyle(
-                      color: Colors.blue,
-                      fontSize: 14,
-                      fontWeight: FontWeight.w300
-                      
-                    ),
-                    ),
+                  
               SizedBox(height: 70,),
                     Container(
                       width: 400,
@@ -74,7 +63,7 @@ class step extends StatelessWidget {
                           enabledBorder: OutlineInputBorder(
                               borderSide: BorderSide(color: Colors.grey, width: 1),
                           ),
-                          labelText: 'Birthday (27 years old)',
+                          labelText: 'Mobile number',
                         
                         ),
 
@@ -110,9 +99,43 @@ class step extends StatelessWidget {
                         ),
                       ),
                     ),
+                    SizedBox(height: 10,),
+                    GestureDetector(
+                      child: Container(
+                        alignment: Alignment.center,
+                        width: 400,
+                        decoration: BoxDecoration(
+                          // borderRadius: BorderRadius.circular(50),
+                        border: Border.all(
+                        color: Colors.grey,
+                        width: 1,
+                      ),
+                          gradient: LinearGradient(
+                            begin: Alignment.centerLeft,
+                            end: Alignment.centerRight,
+                            colors: [
+                              Color.fromARGB(255, 255, 255, 255),
+                              Color.fromARGB(255, 255, 255, 255),
+                              Color.fromARGB(255, 255, 255, 255),
+
+                            ]
+                          )
+                        ),
+                        child: Padding(
+                          padding: EdgeInsets.all(16.0),
+                          child: Text('Sign up with email',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 14,
+                            fontWeight: FontWeight.w300
+                          ),
+                          ),
+                        ),
+                      ),
+                    ),
 
                     SizedBox(
-                      height: 500,
+                      height: 350,
 
                     ),
                     Text('Already have an account?',

@@ -8,12 +8,12 @@ void main() {
 
     ),
     debugShowCheckedModeBanner: false,
-    home: step(),
+    home: step_four(),
   ));
 
 }
 
-class step extends StatelessWidget {
+class step_four extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,7 +35,7 @@ class step extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(height: 100,),
-              Text("What's your Birthday?",
+              Text("Save your login info?",
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.w700,
@@ -46,7 +46,7 @@ class step extends StatelessWidget {
                       height: 10,
 
                     ),
-                    Text('Choos your date of birth. You can always make this private later.',
+                    Text("Well save the login info, so you won't need to enter it next time you log in.",
                     style: TextStyle(
                       color: Colors.black,
                       fontSize: 14,
@@ -54,32 +54,8 @@ class step extends StatelessWidget {
                       
                     ),
                     ),
-                    SizedBox(
-                      height: 10,
-
-                    ),
-                    Text('Why do I need to provider my birthday?',
-                    style: TextStyle(
-                      color: Colors.blue,
-                      fontSize: 14,
-                      fontWeight: FontWeight.w300
-                      
-                    ),
-                    ),
-              SizedBox(height: 70,),
-                    Container(
-                      width: 400,
-                      child: TextField(
-                        decoration: InputDecoration(
-                          enabledBorder: OutlineInputBorder(
-                              borderSide: BorderSide(color: Colors.grey, width: 1),
-                          ),
-                          labelText: 'Birthday (27 years old)',
-                        
-                        ),
-
-                      ),
-                    ),
+                  
+              
               SizedBox(height: 20,),
                     GestureDetector(
                       child: Container(
@@ -100,7 +76,7 @@ class step extends StatelessWidget {
                         ),
                         child: Padding(
                           padding: EdgeInsets.all(16.0),
-                          child: Text('Next',
+                          child: Text('Save',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 14,
@@ -110,9 +86,43 @@ class step extends StatelessWidget {
                         ),
                       ),
                     ),
+                    SizedBox(height: 10,),
+                    GestureDetector(
+                      child: Container(
+                        alignment: Alignment.center,
+                        width: 400,
+                        decoration: BoxDecoration(
+                          // borderRadius: BorderRadius.circular(50),
+                        border: Border.all(
+                        color: Colors.grey,
+                        width: 1,
+                      ),
+                          gradient: LinearGradient(
+                            begin: Alignment.centerLeft,
+                            end: Alignment.centerRight,
+                            colors: [
+                              Color.fromARGB(255, 255, 255, 255),
+                              Color.fromARGB(255, 255, 255, 255),
+                              Color.fromARGB(255, 255, 255, 255),
+
+                            ]
+                          )
+                        ),
+                        child: Padding(
+                          padding: EdgeInsets.all(16.0),
+                          child: Text('Not now',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 14,
+                            fontWeight: FontWeight.w300
+                          ),
+                          ),
+                        ),
+                      ),
+                    ),
 
                     SizedBox(
-                      height: 500,
+                      height: 410,
 
                     ),
                     Text('Already have an account?',

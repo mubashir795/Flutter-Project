@@ -8,12 +8,12 @@ void main() {
 
     ),
     debugShowCheckedModeBanner: false,
-    home: step(),
+    home: step_five(),
   ));
 
 }
 
-class step extends StatelessWidget {
+class step_five extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,7 +35,7 @@ class step extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(height: 100,),
-              Text("What's your Birthday?",
+              Text("Agree to Facebook's terms and policies",
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.w700,
@@ -46,7 +46,7 @@ class step extends StatelessWidget {
                       height: 10,
 
                     ),
-                    Text('Choos your date of birth. You can always make this private later.',
+                    Text("People who use our service may have uploaded your contact information to Facebook. Learn more",
                     style: TextStyle(
                       color: Colors.black,
                       fontSize: 14,
@@ -54,32 +54,47 @@ class step extends StatelessWidget {
                       
                     ),
                     ),
+
                     SizedBox(
                       height: 10,
 
                     ),
-                    Text('Why do I need to provider my birthday?',
+                    Text("By tapping I agree, you agree to create an account and to Facebook's Terms, Privay Policy and Cookies Policy.",
                     style: TextStyle(
-                      color: Colors.blue,
+                      color: Colors.black,
                       fontSize: 14,
                       fontWeight: FontWeight.w300
                       
                     ),
                     ),
-              SizedBox(height: 70,),
-                    Container(
-                      width: 400,
-                      child: TextField(
-                        decoration: InputDecoration(
-                          enabledBorder: OutlineInputBorder(
-                              borderSide: BorderSide(color: Colors.grey, width: 1),
-                          ),
-                          labelText: 'Birthday (27 years old)',
-                        
-                        ),
 
-                      ),
+                    SizedBox(
+                      height: 10,
+
                     ),
+                    Text("The Privacy Policy describes the ways we can use the information we collect when you create an account. For example we use this information to provide to provide, personalize and improve our products, including ads.",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 14,
+                      fontWeight: FontWeight.w300
+                      
+                    ),
+                    ),
+
+                    SizedBox(
+                      height: 10,
+
+                    ),
+                    Text("You'll also recieve SMS notification from us and can opt out any time. Learn more",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 14,
+                      fontWeight: FontWeight.w300
+                      
+                    ),
+                    ),
+                  
+              
               SizedBox(height: 20,),
                     GestureDetector(
                       child: Container(
@@ -100,7 +115,7 @@ class step extends StatelessWidget {
                         ),
                         child: Padding(
                           padding: EdgeInsets.all(16.0),
-                          child: Text('Next',
+                          child: Text('I agree',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 14,
@@ -110,9 +125,9 @@ class step extends StatelessWidget {
                         ),
                       ),
                     ),
-
+                    
                     SizedBox(
-                      height: 500,
+                      height: 410,
 
                     ),
                     Text('Already have an account?',

@@ -8,12 +8,12 @@ void main() {
 
     ),
     debugShowCheckedModeBanner: false,
-    home: step(),
+    home: step_three(),
   ));
 
 }
 
-class step extends StatelessWidget {
+class step_three extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,7 +35,7 @@ class step extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(height: 100,),
-              Text("What's your Birthday?",
+              Text("Create a password",
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.w700,
@@ -46,7 +46,7 @@ class step extends StatelessWidget {
                       height: 10,
 
                     ),
-                    Text('Choos your date of birth. You can always make this private later.',
+                    Text("Create a password with at least 6 letters and numbers. it should be something others can't guess.",
                     style: TextStyle(
                       color: Colors.black,
                       fontSize: 14,
@@ -54,18 +54,7 @@ class step extends StatelessWidget {
                       
                     ),
                     ),
-                    SizedBox(
-                      height: 10,
-
-                    ),
-                    Text('Why do I need to provider my birthday?',
-                    style: TextStyle(
-                      color: Colors.blue,
-                      fontSize: 14,
-                      fontWeight: FontWeight.w300
-                      
-                    ),
-                    ),
+                  
               SizedBox(height: 70,),
                     Container(
                       width: 400,
@@ -74,7 +63,7 @@ class step extends StatelessWidget {
                           enabledBorder: OutlineInputBorder(
                               borderSide: BorderSide(color: Colors.grey, width: 1),
                           ),
-                          labelText: 'Birthday (27 years old)',
+                          labelText: 'Password',
                         
                         ),
 
@@ -110,9 +99,9 @@ class step extends StatelessWidget {
                         ),
                       ),
                     ),
-
+                    
                     SizedBox(
-                      height: 500,
+                      height: 400,
 
                     ),
                     Text('Already have an account?',

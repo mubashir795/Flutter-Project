@@ -5,6 +5,11 @@ import 'package:flutter/material.dart';
 import 'login.dart';
 import 'signup.dart';
 import 'step.dart';
+import 'step_one.dart';
+import 'step_two.dart';
+import 'step_three.dart';
+import 'step_four.dart';
+import 'step_five.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -13,7 +18,7 @@ void main() {
 
     ),
     debugShowCheckedModeBanner: false,
-    home: step(),
+    home: step_one(),
     // routes: {
     //   '/signup': (_) => signup()
     // },

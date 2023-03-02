@@ -8,12 +8,12 @@ void main() {
 
     ),
     debugShowCheckedModeBanner: false,
-    home: step(),
+    home: step_one(),
   ));
 
 }
 
-class step extends StatelessWidget {
+class step_one extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,7 +35,7 @@ class step extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(height: 100,),
-              Text("What's your Birthday?",
+              Text("What's your gender?",
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.w700,
@@ -46,7 +46,7 @@ class step extends StatelessWidget {
                       height: 10,
 
                     ),
-                    Text('Choos your date of birth. You can always make this private later.',
+                    Text('You can change who sees your gender on your profile later',
                     style: TextStyle(
                       color: Colors.black,
                       fontSize: 14,
@@ -54,32 +54,39 @@ class step extends StatelessWidget {
                       
                     ),
                     ),
-                    SizedBox(
-                      height: 10,
+                   Column(
+  children: [
+      
+      RadioListTile(
+          title: Text("Male"),
+          value: "male", 
+          groupValue: "gender", 
+          onChanged: (value){
+            
+          },
+      ),
 
-                    ),
-                    Text('Why do I need to provider my birthday?',
-                    style: TextStyle(
-                      color: Colors.blue,
-                      fontSize: 14,
-                      fontWeight: FontWeight.w300
-                      
-                    ),
-                    ),
-              SizedBox(height: 70,),
-                    Container(
-                      width: 400,
-                      child: TextField(
-                        decoration: InputDecoration(
-                          enabledBorder: OutlineInputBorder(
-                              borderSide: BorderSide(color: Colors.grey, width: 1),
-                          ),
-                          labelText: 'Birthday (27 years old)',
-                        
-                        ),
+      RadioListTile(
+          title: Text("Female"),
+          value: "female", 
+          groupValue: "gender", 
+          onChanged: (value){
+            
+          },
+      ),
 
-                      ),
-                    ),
+      RadioListTile(
+            title: Text("Custom"),
+            value: "other", 
+            groupValue: "gender", 
+            onChanged: (value){
+              
+            },
+      )
+  ],
+),
+
+          
               SizedBox(height: 20,),
                     GestureDetector(
                       child: Container(
@@ -112,7 +119,7 @@ class step extends StatelessWidget {
                     ),
 
                     SizedBox(
-                      height: 500,
+                      height: 400,
 
                     ),
                     Text('Already have an account?',
