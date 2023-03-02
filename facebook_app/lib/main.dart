@@ -10,6 +10,7 @@ import 'step_two.dart';
 import 'step_three.dart';
 import 'step_four.dart';
 import 'step_five.dart';
+import 'landing.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -18,7 +19,7 @@ void main() {
 
     ),
     debugShowCheckedModeBanner: false,
-    home: step_one(),
+    home: landing(),
     // routes: {
     //   '/signup': (_) => signup()
     // },

@@ -59,10 +59,13 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
-  # To add assets to your application, add an assets section, like this:
+  # To add assets to your application, add an assets section, like this: one.jpeg
   assets:
     - assets/images/facebook_logo.png
     - assets/images/facebook-circle.png
+    - assets/images/one.jpeg
+    - assets/images/two.jpeg
+    - assets/images/three.jpeg
    
 
   # An image asset can refer to one or more resolution-specific "variants", see
