@@ -1,6 +1,6 @@
+import 'package:facebook_app/landing.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'friends.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -9,85 +9,36 @@ void main() {
 
     ),
     debugShowCheckedModeBanner: false,
-    home: landing(),
+    home: friends(),
   ));
 
 }
 
-class landing extends StatelessWidget {
+class friends extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(children: <Widget>[
-   Row(
+
+      Row( //ROW ONE
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
           SizedBox(height: 150,),
-          Container(
-            child:Text("facebook",
-                style: TextStyle(
-                  fontSize: 34,
-                  fontWeight: FontWeight.w800,
-                  color: Colors.blue,
-                ),
-            ),
-          ),
           IconButton(
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) =>  friends()),
+                MaterialPageRoute(builder: (context) =>  landing()),
               );
             },
-            icon: Icon(Icons.add)
+            icon: Icon(Icons.home, size: 34, color: Colors.blue,)
           ),
-
-          Container(
-            child:CircleAvatar(backgroundColor: Color.fromARGB(255, 224, 223, 223),
-              child: Icon(
-                Icons.search,
-                color: Colors.black,
-                ),
-              ),
-          ),
-          Container(
-            child:CircleAvatar(backgroundColor: Color.fromARGB(255, 224, 223, 223),
-              child: Icon(
-                Icons.messenger,
-                color: Colors.black,
-                ),
-              ),
-          ),
-        ],
-      ),
-
-
-      Row( //ROW TWO
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: <Widget>[
-          
           Container( 
             child: Icon(
-              Icons.home,
-              color: Colors.blue,
+              Icons.group,
+              color: Colors.black,
               size: 34,
             ),  
-          ),
-          // Container( 
-          //   child: Icon(
-          //     Icons.group,
-          //     color: Colors.black,
-          //     size: 34,
-          //   ),  
-          // ),
-          IconButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) =>  friends()),
-              );
-            },
-            icon: Icon(Icons.group, size: 34)
           ),
           Container( 
             child: Icon(
@@ -120,49 +71,69 @@ class landing extends StatelessWidget {
         ],
       ),
       Divider(
-        height: 50,
+        height: 30,
         thickness: 2,
       ),
 
+     
+
+Row( //ROW TWO
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          SizedBox(height: 50,),
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 10, 200, 40 ),
+            child:Text("Friends",
+                style: TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.w800,
+                  color: Colors.black,
+                ),
+            ),
+          ),
+
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 10, 0, 40 ),
+            child:CircleAvatar(backgroundColor: Color.fromARGB(255, 224, 223, 223),
+              child: Icon(
+                Icons.search,
+                color: Colors.black,
+                ),
+              ),
+          ),
+        ],
+      ),
       Row( //ROW Three
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
-
-          Stack(
-            alignment: const Alignment(0.6, 0.6),
-            children: [
-              const CircleAvatar(
-                backgroundImage: AssetImage('assets/images/facebook_logo.png'),
-                radius: 25,
-                
-              ),
-            ]
-          ),
-          
-          Container( 
-            width: 230,
-            child: TextField(
-              decoration: InputDecoration(
-                enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.grey, width: 1),
-                    borderRadius: BorderRadius.circular(50),
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 10, 100, 10 ),
+            child:Text("Suggestions",
+                style: TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w400,
+                  color: Colors.black,
+                  // backgroundColor: Color.fromARGB(255, 213, 212, 212),
                 ),
-                labelText: "What's on your mind?",
-              ),
-            ), 
+            ),
           ),
-          Container( 
-            child: Icon(
-              Icons.image,
-              color: Colors.blue,
-              size: 34,
-            ),  
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 10, 0, 10 ),
+            child:Text("Your Friends",
+                style: TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w400,
+                  color: Colors.black,
+                  // backgroundColor: Color.fromARGB(255, 213, 212, 212),
+                ),
+            ),
+            
           ),
         ],
       ),
       Divider(
-        height: 100,
-        thickness: 10,
+        height: 30,
+        thickness: 2,
       ),
       Row( //ROW Four
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -231,13 +202,8 @@ class landing extends StatelessWidget {
           ),
         ],
       ),
-      Container( 
-            child: Image.asset('assets/images/feedback.jpeg'), 
-            width: 450,
-            height: 200,
-          ),
+      
     ]),
     );
   }
 }
-
