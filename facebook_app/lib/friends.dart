@@ -135,74 +135,171 @@ Row( //ROW TWO
         height: 30,
         thickness: 2,
       ),
-      Row( //ROW Four
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: <Widget>[          
-          Container( 
-            child: Image.asset('assets/images/two.jpeg'), 
-            width: 100,
-            height: 150,
-          ),
-          Container( 
-            child: Image.asset('assets/images/two.jpeg'), 
-            width: 100,
-            height: 150,
-          ),
-          Container( 
-            child: Image.asset('assets/images/three.jpeg'), 
-            width: 100,
-            height: 150,
-          ),
-          
-        ],
-      ),
-      Divider(
-        height: 100,
-        thickness: 10,
-      ),
 
-      Row( //ROW Five
+      Row( //ROW FOUR
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
-
-          Stack(
-            alignment: const Alignment(0.9, 0.9),
-            children: [
-              const CircleAvatar(
-                backgroundImage: AssetImage('assets/images/facebook_logo.png'),
-                radius: 25,
-                
-              ),
-            ]
-            
-          ),
-          
           Container(
-            child:Text("SUNO TV, posted a video to playlist \nBreaking News - March 2023",
+            margin: EdgeInsets.fromLTRB(0, 10, 150, 10 ),
+            child:Text("Friend requests 10",
                 style: TextStyle(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w400,
+                  fontSize: 18,
+                  fontWeight: FontWeight.w500,
                   color: Colors.black,
+                  // backgroundColor: Color.fromARGB(255, 213, 212, 212),
                 ),
             ),
           ),
-          Container( 
-            child: Icon(
-              Icons.more_horiz_outlined,
-              color: Colors.black,
-              size: 34,
-            ),  
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 10, 0, 10 ),
+            child:Text("See All",
+                style: TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w400,
+                  color: Colors.blue,
+                  // backgroundColor: Color.fromARGB(255, 213, 212, 212),
+                ),
+            ),
           ),
-          Container( 
-            child: Icon(
-              Icons.close,
-              color: Colors.black,
-              size: 34,
-            ),  
+        ],
+      ),
+
+      Row( //ROW FIve
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          Stack(
+            alignment: const Alignment(0.6, 0.6),
+            children: [
+              const CircleAvatar(
+                backgroundImage: AssetImage('assets/images/feedback.jpeg'),
+                radius: 45,
+                
+              ),
+            ]
+          ),
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 0, 160, 50 ),
+            child:Text("Mubashar Lateef",
+              style: TextStyle(
+                fontSize: 14,
+                fontWeight: FontWeight.w400,
+                color: Colors.black,
+                // backgroundColor: Color.fromARGB(255, 213, 212, 212),
+              ),
+            ),
           ),
         ],
       ),
       
+      Divider(
+        height: 30,
+        thickness: 2,
+      ),
+
+      Row( //ROW SIX
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 10, 190, 10 ),
+            child:Text("People You May Know",
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.black,
+                  // backgroundColor: Color.fromARGB(255, 213, 212, 212),
+                ),
+            ),
+          ),
+        ],
+      ),
+
+      Row( //ROW Seven
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          Stack(
+            alignment: const Alignment(0.6, 0.6),
+            children: [
+              const CircleAvatar(
+                backgroundImage: AssetImage('assets/images/three.jpeg'),
+                radius: 45,
+                
+              ),
+            ]
+          ),
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 0, 160, 50 ),
+            child:Text("Mubashar Lateef",
+              style: TextStyle(
+                fontSize: 14,
+                fontWeight: FontWeight.w400,
+                color: Colors.black,
+                // backgroundColor: Color.fromARGB(255, 213, 212, 212),
+              ),
+            ),
+          ),
+        ],
+      ),
+
+      Row( //ROW Seven
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          Stack(
+            alignment: const Alignment(0.6, 0.6),
+            children: [
+              const CircleAvatar(
+                backgroundImage: AssetImage('assets/images/one.jpeg'),
+                radius: 45,
+                
+              ),
+            ]
+          ),
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 0, 160, 50 ),
+            child:Text("Mubashar Lateef",
+              style: TextStyle(
+                fontSize: 14,
+                fontWeight: FontWeight.w400,
+                color: Colors.black,
+                // backgroundColor: Color.fromARGB(255, 213, 212, 212),
+              ),
+            ),
+          ),
+        ],
+      ),
+      Row( //ROW Seven
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          Stack(
+            alignment: const Alignment(0.6, 0.6),
+            children: [
+              const CircleAvatar(
+                backgroundImage: AssetImage('assets/images/two.jpeg'),
+                radius: 45,
+                
+              ),
+            ]
+          ),
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 0, 160, 50 ),
+            child:Text("Mubashar Lateef",
+              style: TextStyle(
+                fontSize: 14,
+                fontWeight: FontWeight.w400,
+                color: Colors.black,
+                // backgroundColor: Color.fromARGB(255, 213, 212, 212),
+              ),
+            ),
+          ),
+          
+        ],
+      ),
+      TextButton(
+  style: ButtonStyle(
+    foregroundColor: MaterialStateProperty.all<Color>(Colors.blue),
+  ),
+  onPressed: () { },
+  child: Text('TextButton'),
+)
     ]),
     );
   }
