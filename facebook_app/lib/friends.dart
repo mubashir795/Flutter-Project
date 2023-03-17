@@ -23,7 +23,7 @@ class friends extends StatelessWidget {
       Row( //ROW ONE
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
-          SizedBox(height: 150,),
+          SizedBox(height: 140,),
           IconButton(
             onPressed: () {
               Navigator.push(
@@ -82,7 +82,7 @@ Row( //ROW TWO
         children: <Widget>[
           SizedBox(height: 50,),
           Container(
-            margin: EdgeInsets.fromLTRB(0, 10, 200, 40 ),
+            margin: EdgeInsets.fromLTRB(0, 0, 200, 10 ),
             child:Text("Friends",
                 style: TextStyle(
                   fontSize: 30,
@@ -93,7 +93,7 @@ Row( //ROW TWO
           ),
 
           Container(
-            margin: EdgeInsets.fromLTRB(0, 10, 0, 40 ),
+            margin: EdgeInsets.fromLTRB(0, 0, 0, 10 ),
             child:CircleAvatar(backgroundColor: Color.fromARGB(255, 224, 223, 223),
               child: Icon(
                 Icons.search,
@@ -107,27 +107,38 @@ Row( //ROW TWO
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
           Container(
-            margin: EdgeInsets.fromLTRB(0, 10, 100, 10 ),
-            child:Text("Suggestions",
-                style: TextStyle(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w400,
-                  color: Colors.black,
-                  // backgroundColor: Color.fromARGB(255, 213, 212, 212),
-                ),
+            margin: EdgeInsets.fromLTRB(0, 0, 0, 0 ),
+            child:TextButton(
+            style: ButtonStyle(
+              padding:MaterialStateProperty.all(EdgeInsets.all(10)),
+              foregroundColor: MaterialStateProperty.all<Color>(Colors.black),
+              backgroundColor: MaterialStateProperty.all<Color>(Color.fromARGB(255, 224, 223, 223)),
+              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(18.0),      
+                )
+              )
             ),
+            onPressed: () {},
+            child: const Text('Suggestions'),
+          ),
           ),
           Container(
-            margin: EdgeInsets.fromLTRB(0, 10, 0, 10 ),
-            child:Text("Your Friends",
-                style: TextStyle(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w400,
-                  color: Colors.black,
-                  // backgroundColor: Color.fromARGB(255, 213, 212, 212),
-                ),
+            margin: EdgeInsets.fromLTRB(0, 0, 100, 0 ),
+            child:TextButton(
+            style: ButtonStyle(
+              padding:MaterialStateProperty.all(EdgeInsets.all(10)),
+              foregroundColor: MaterialStateProperty.all<Color>(Colors.black),
+              backgroundColor: MaterialStateProperty.all<Color>(Color.fromARGB(255, 224, 223, 223)),
+              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(18.0),      
+                )
+              ),
             ),
-            
+            onPressed: () {},
+            child: const Text('Your Friends'),
+          ),
           ),
         ],
       ),
@@ -140,8 +151,8 @@ Row( //ROW TWO
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
           Container(
-            margin: EdgeInsets.fromLTRB(0, 10, 150, 10 ),
-            child:Text("Friend requests 10",
+            margin: EdgeInsets.fromLTRB(0, 10, 140, 10 ),
+            child:Text("Friend requests 1",
                 style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.w500,
@@ -167,6 +178,9 @@ Row( //ROW TWO
       Row( //ROW FIve
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
+          SizedBox(
+            height: 100, // <-- SEE HERE
+          ),
           Stack(
             alignment: const Alignment(0.6, 0.6),
             children: [
@@ -178,7 +192,7 @@ Row( //ROW TWO
             ]
           ),
           Container(
-            margin: EdgeInsets.fromLTRB(0, 0, 160, 50 ),
+            margin: EdgeInsets.fromLTRB(0, 0, 10, 50 ),
             child:Text("Mubashar Lateef",
               style: TextStyle(
                 fontSize: 14,
@@ -187,6 +201,24 @@ Row( //ROW TWO
                 // backgroundColor: Color.fromARGB(255, 213, 212, 212),
               ),
             ),
+          ),
+          TextButton(
+            style: TextButton.styleFrom(
+                foregroundColor: Colors.white,
+                backgroundColor: Colors.blue,
+                textStyle: const TextStyle(fontSize: 14)),
+            onPressed: () {},
+            child: const Text('Confirm'),
+          ),
+          TextButton(
+            style: TextButton.styleFrom(
+                foregroundColor: Colors.black,
+                backgroundColor: Color.fromARGB(255, 224, 223, 223),
+                textStyle: const TextStyle(fontSize: 14)),
+            onPressed: () {
+            
+          },
+            child: const Text('Delete'),
           ),
         ],
       ),
@@ -200,7 +232,7 @@ Row( //ROW TWO
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
           Container(
-            margin: EdgeInsets.fromLTRB(0, 10, 190, 10 ),
+            margin: EdgeInsets.fromLTRB(0, 10, 180, 10 ),
             child:Text("People You May Know",
                 style: TextStyle(
                   fontSize: 18,
@@ -216,6 +248,9 @@ Row( //ROW TWO
       Row( //ROW Seven
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
+          SizedBox(
+            height: 100, // <-- SEE HERE
+          ),
           Stack(
             alignment: const Alignment(0.6, 0.6),
             children: [
@@ -227,7 +262,7 @@ Row( //ROW TWO
             ]
           ),
           Container(
-            margin: EdgeInsets.fromLTRB(0, 0, 160, 50 ),
+            margin: EdgeInsets.fromLTRB(0, 0, 10, 50 ),
             child:Text("Mubashar Lateef",
               style: TextStyle(
                 fontSize: 14,
@@ -237,12 +272,31 @@ Row( //ROW TWO
               ),
             ),
           ),
+          TextButton(
+            style: TextButton.styleFrom(
+                foregroundColor: Colors.white,
+                backgroundColor: Colors.blue,
+                textStyle: const TextStyle(fontSize: 14)),
+            onPressed: () {},
+            child: const Text('Confirm'),
+          ),
+          TextButton(
+            style: TextButton.styleFrom(
+                foregroundColor: Colors.black,
+                backgroundColor: Color.fromARGB(255, 224, 223, 223),
+                textStyle: const TextStyle(fontSize: 14)),
+            onPressed: () {},
+            child: const Text('Delete'),
+          ),
         ],
       ),
 
       Row( //ROW Seven
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
+          SizedBox(
+            height: 100, // <-- SEE HERE
+          ),
           Stack(
             alignment: const Alignment(0.6, 0.6),
             children: [
@@ -254,7 +308,7 @@ Row( //ROW TWO
             ]
           ),
           Container(
-            margin: EdgeInsets.fromLTRB(0, 0, 160, 50 ),
+            margin: EdgeInsets.fromLTRB(0, 0, 10, 50 ),
             child:Text("Mubashar Lateef",
               style: TextStyle(
                 fontSize: 14,
@@ -264,11 +318,30 @@ Row( //ROW TWO
               ),
             ),
           ),
+          TextButton(
+            style: TextButton.styleFrom(
+                foregroundColor: Colors.white,
+                backgroundColor: Colors.blue,
+                textStyle: const TextStyle(fontSize: 14)),
+            onPressed: () {},
+            child: const Text('Confirm'),
+          ),
+          TextButton(
+            style: TextButton.styleFrom(
+                foregroundColor: Colors.black,
+                backgroundColor: Color.fromARGB(255, 224, 223, 223),
+                textStyle: const TextStyle(fontSize: 14)),
+            onPressed: () {},
+            child: const Text('Delete'),
+          ),
         ],
       ),
       Row( //ROW Seven
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
+          SizedBox(
+            height: 100, // <-- SEE HERE
+          ),
           Stack(
             alignment: const Alignment(0.6, 0.6),
             children: [
@@ -280,7 +353,7 @@ Row( //ROW TWO
             ]
           ),
           Container(
-            margin: EdgeInsets.fromLTRB(0, 0, 160, 50 ),
+            margin: EdgeInsets.fromLTRB(0, 0, 10, 50 ),
             child:Text("Mubashar Lateef",
               style: TextStyle(
                 fontSize: 14,
@@ -290,17 +363,26 @@ Row( //ROW TWO
               ),
             ),
           ),
+          TextButton(
+            style: TextButton.styleFrom(
+                foregroundColor: Colors.white,
+                backgroundColor: Colors.blue,
+                textStyle: const TextStyle(fontSize: 14)),
+            onPressed: () {},
+            child: const Text('Confirm'),
+          ),
+          TextButton(
+            style: TextButton.styleFrom(
+                foregroundColor: Colors.black,
+                backgroundColor: Color.fromARGB(255, 224, 223, 223),
+                textStyle: const TextStyle(fontSize: 14)),
+            onPressed: () {},
+            child: const Text('Delete'),
+          ),
           
         ],
       ),
-      TextButton(
-  style: ButtonStyle(
-    foregroundColor: MaterialStateProperty.all<Color>(Colors.blue),
-  ),
-  onPressed: () { },
-  child: Text('TextButton'),
-)
-    ]),
+         ]),
     );
   }
 }
