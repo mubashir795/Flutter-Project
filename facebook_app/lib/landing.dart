@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'friends.dart';
+import 'video.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -9,13 +10,16 @@ void main() {
   ));
 
 }
-
 class landing extends StatelessWidget {
+
   @override
-  Widget build(BuildContext context) {
+ Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(children: <Widget>[
-   Row(
+      
+      body: SingleChildScrollView(
+          child: Column(
+        children: <Widget>[
+          Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
           SizedBox(height: 50,),
@@ -59,7 +63,7 @@ class landing extends StatelessWidget {
           ),
         ],
       ),
-      
+
       Row( //ROW TWO
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
@@ -80,12 +84,14 @@ class landing extends StatelessWidget {
             },
             icon: Icon(Icons.people_outline, size: 34)
           ),
-          Container( 
-            child: Icon(
-              Icons.ondemand_video_outlined,
-              color: Colors.black,
-              size: 34,
-            ),  
+          IconButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) =>  video()),
+              );
+            },
+            icon: Icon(Icons.ondemand_video_outlined, size: 34)
           ),
           Container( 
             child: Icon(
@@ -231,10 +237,136 @@ class landing extends StatelessWidget {
       Container( 
         child: Image.asset('assets/images/feedback.jpeg'), 
         width: 450,
-        height: 290,
+        height: 285,
       ),
-    ]),
+      Divider(
+        height: 40,
+        thickness: 1,
+      ),
+
+      Row( //ROW Three
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          Container( 
+            child:Text(
+              'Like',
+              textAlign: TextAlign.center,
+              overflow: TextOverflow.ellipsis,
+              style: const TextStyle(fontWeight: FontWeight.bold),
+            )
+          ),
+          Container( 
+            child:Text(
+              'Comment',
+              textAlign: TextAlign.center,
+              overflow: TextOverflow.ellipsis,
+              style: const TextStyle(fontWeight: FontWeight.bold),
+            )
+          ),
+          Container( 
+            child:Text(
+              'Share',
+              textAlign: TextAlign.center,
+              overflow: TextOverflow.ellipsis,
+              style: const TextStyle(fontWeight: FontWeight.bold),
+            )
+          ),
+          
+        ],
+      ),
+       Divider(
+        height: 40,
+        thickness: 10,
+      ),
+
+
+      Row( //ROW Five
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+
+          Stack(
+            alignment: const Alignment(0.9, 0.9),
+            children: [
+              const CircleAvatar(
+                backgroundImage: AssetImage('assets/images/facebook_logo.png'),
+                radius: 25,
+                
+              ),
+            ]
+          ),
+          Container(
+            child:Text("Mubashar Lateef Posted a new Post",
+                style: TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w400,
+                  color: Colors.black,
+                ),
+            ),
+          ),
+          Container( 
+            child: Icon(
+              Icons.more_horiz_outlined,
+              color: Colors.black,
+              size: 34,
+            ),  
+          ),
+          Container( 
+            child: Icon(
+              Icons.close,
+              color: Colors.black,
+              size: 34,
+            ),  
+          ),
+        ],
+      ),
+      Container( 
+        child: Image.asset('assets/images/feedback-1.jpeg'), 
+        width: 450,
+        height: 285,
+      ),
+      Divider(
+        height: 0,
+        thickness: 1,
+      ),
+
+      Row( //ROW Three
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          Container( 
+            child:Text(
+              'Like',
+              textAlign: TextAlign.center,
+              overflow: TextOverflow.ellipsis,
+              style: const TextStyle(fontWeight: FontWeight.bold),
+            )
+          ),
+          Container( 
+            child:Text(
+              'Comment',
+              textAlign: TextAlign.center,
+              overflow: TextOverflow.ellipsis,
+              style: const TextStyle(fontWeight: FontWeight.bold),
+            )
+          ),
+          Container( 
+            child:Text(
+              'Share',
+              textAlign: TextAlign.center,
+              overflow: TextOverflow.ellipsis,
+              style: const TextStyle(fontWeight: FontWeight.bold),
+            )
+          ),
+          
+        ],
+      ),
+       Divider(
+        height: 40,
+        thickness: 10,
+      ),
+        ],
+      )),
     );
   }
 }
+
 

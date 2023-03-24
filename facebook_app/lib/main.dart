@@ -12,6 +12,7 @@ import 'step_four.dart';
 import 'step_five.dart';
 import 'landing.dart';
 import 'friends.dart';
+import 'video.dart';
 
 void main() {
   runApp(MaterialApp(

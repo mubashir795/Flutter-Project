@@ -67,6 +67,7 @@ flutter:
     - assets/images/two.jpeg
     - assets/images/three.jpeg
     - assets/images/feedback.jpeg
+    - assets/images/feedback-1.jpeg
    
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -23,8 +23,10 @@ class friends extends StatelessWidget {
       Row( //ROW ONE
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
-          SizedBox(height: 140,),
-          IconButton(
+          SizedBox(height: 80,),
+          Container(
+          margin: EdgeInsets.fromLTRB(0, 50, 10, 0 ),
+          child: IconButton(
             onPressed: () {
               Navigator.push(
                 context,
@@ -33,7 +35,10 @@ class friends extends StatelessWidget {
             },
             icon: Icon(Icons.home_outlined, size: 34, color: Colors.black,)
           ),
+          ),
+          
           Container( 
+            margin: EdgeInsets.fromLTRB(0, 50, 15, 0 ),
             child: Icon(
               Icons.people_outline,
               color: Colors.black,
@@ -41,6 +46,7 @@ class friends extends StatelessWidget {
             ),  
           ),
           Container( 
+            margin: EdgeInsets.fromLTRB(0, 50, 15, 0 ),
             child: Icon(
               Icons.ondemand_video_outlined,
               color: Colors.black,
@@ -48,6 +54,7 @@ class friends extends StatelessWidget {
             ),  
           ),
           Container( 
+            margin: EdgeInsets.fromLTRB(0, 50, 15, 0 ),
             child: Icon(
               Icons.storefront,
               color: Colors.black,
@@ -55,6 +62,7 @@ class friends extends StatelessWidget {
             ),  
           ),
           Container( 
+            margin: EdgeInsets.fromLTRB(0, 50, 15, 0 ),
             child: Icon(
               Icons.notifications_outlined,
               color: Colors.black,
@@ -62,6 +70,7 @@ class friends extends StatelessWidget {
             ),  
           ),
           Container( 
+            margin: EdgeInsets.fromLTRB(0, 50, 15, 0 ),
             child: Icon(
               Icons.menu,
               color: Colors.black,
@@ -272,7 +281,9 @@ Row( //ROW TWO
               ),
             ),
           ),
-          TextButton(
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 0, 0, 0 ),
+            child:TextButton(
             style: TextButton.styleFrom(
                 foregroundColor: Colors.white,
                 backgroundColor: Colors.blue,
@@ -280,13 +291,17 @@ Row( //ROW TWO
             onPressed: () {},
             child: const Text('Confirm'),
           ),
-          TextButton(
+          ),
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 0, 0, 0 ),
+            child:TextButton(
             style: TextButton.styleFrom(
                 foregroundColor: Colors.black,
                 backgroundColor: Color.fromARGB(255, 224, 223, 223),
                 textStyle: const TextStyle(fontSize: 14)),
             onPressed: () {},
             child: const Text('Delete'),
+          ),
           ),
         ],
       ),
@@ -379,7 +394,52 @@ Row( //ROW TWO
             onPressed: () {},
             child: const Text('Delete'),
           ),
-          
+        ],
+      ),
+
+      Row( //ROW Seven
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          SizedBox(
+            height: 100, // <-- SEE HERE
+          ),
+          Stack(
+            alignment: const Alignment(0.6, 0.6),
+            children: [
+              const CircleAvatar(
+                backgroundImage: AssetImage('assets/images/two.jpeg'),
+                radius: 45,
+                
+              ),
+            ]
+          ),
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 0, 10, 50 ),
+            child:Text("Mubashar Lateef",
+              style: TextStyle(
+                fontSize: 14,
+                fontWeight: FontWeight.w400,
+                color: Colors.black,
+                // backgroundColor: Color.fromARGB(255, 213, 212, 212),
+              ),
+            ),
+          ),
+          TextButton(
+            style: TextButton.styleFrom(
+                foregroundColor: Colors.white,
+                backgroundColor: Colors.blue,
+                textStyle: const TextStyle(fontSize: 14)),
+            onPressed: () {},
+            child: const Text('Confirm'),
+          ),
+          TextButton(
+            style: TextButton.styleFrom(
+                foregroundColor: Colors.black,
+                backgroundColor: Color.fromARGB(255, 224, 223, 223),
+                textStyle: const TextStyle(fontSize: 14)),
+            onPressed: () {},
+            child: const Text('Delete'),
+          ),
         ],
       ),
          ]),
