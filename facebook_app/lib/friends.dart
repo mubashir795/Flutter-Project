@@ -31,32 +31,32 @@ class friends extends StatelessWidget {
                 MaterialPageRoute(builder: (context) =>  landing()),
               );
             },
-            icon: Icon(Icons.home, size: 34, color: Colors.blue,)
+            icon: Icon(Icons.home_outlined, size: 34, color: Colors.black,)
           ),
           Container( 
             child: Icon(
-              Icons.group,
+              Icons.people_outline,
               color: Colors.black,
               size: 34,
             ),  
           ),
           Container( 
             child: Icon(
-              Icons.airplay_rounded,
+              Icons.ondemand_video_outlined,
               color: Colors.black,
               size: 34,
             ),  
           ),
           Container( 
             child: Icon(
-              Icons.watch,
+              Icons.storefront,
               color: Colors.black,
               size: 34,
             ),  
           ),
           Container( 
             child: Icon(
-              Icons.search,
+              Icons.notifications_outlined,
               color: Colors.black,
               size: 34,
             ),  
@@ -143,7 +143,7 @@ Row( //ROW TWO
         ],
       ),
       Divider(
-        height: 30,
+        height: 29,
         thickness: 2,
       ),
 

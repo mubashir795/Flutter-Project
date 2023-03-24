@@ -4,10 +4,6 @@ import 'friends.dart';
 
 void main() {
   runApp(MaterialApp(
-    theme: ThemeData(
-      primaryColor: Colors.blue
-
-    ),
     debugShowCheckedModeBanner: false,
     home: landing(),
   ));
@@ -22,8 +18,9 @@ class landing extends StatelessWidget {
    Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
-          SizedBox(height: 150,),
+          SizedBox(height: 50,),
           Container(
+            margin: EdgeInsets.fromLTRB(0, 50, 70, 20 ),
             child:Text("facebook",
                 style: TextStyle(
                   fontSize: 34,
@@ -32,17 +29,18 @@ class landing extends StatelessWidget {
                 ),
             ),
           ),
-          IconButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) =>  friends()),
-              );
-            },
-            icon: Icon(Icons.add)
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 50, 0, 20 ),
+            child:CircleAvatar(backgroundColor: Color.fromARGB(255, 224, 223, 223),
+              child: Icon(
+                Icons.add,
+                color: Colors.black,
+                ),
+              ),
           ),
 
           Container(
+            margin: EdgeInsets.fromLTRB(0, 50, 0, 20 ),
             child:CircleAvatar(backgroundColor: Color.fromARGB(255, 224, 223, 223),
               child: Icon(
                 Icons.search,
@@ -51,6 +49,7 @@ class landing extends StatelessWidget {
               ),
           ),
           Container(
+            margin: EdgeInsets.fromLTRB(0, 50, 0, 20 ),
             child:CircleAvatar(backgroundColor: Color.fromARGB(255, 224, 223, 223),
               child: Icon(
                 Icons.messenger,
@@ -60,26 +59,18 @@ class landing extends StatelessWidget {
           ),
         ],
       ),
-
-
+      
       Row( //ROW TWO
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
           
           Container( 
             child: Icon(
-              Icons.home,
-              color: Colors.blue,
+              Icons.home_outlined,
+              color: Colors.black,
               size: 34,
             ),  
           ),
-          // Container( 
-          //   child: Icon(
-          //     Icons.group,
-          //     color: Colors.black,
-          //     size: 34,
-          //   ),  
-          // ),
           IconButton(
             onPressed: () {
               Navigator.push(
@@ -87,25 +78,25 @@ class landing extends StatelessWidget {
                 MaterialPageRoute(builder: (context) =>  friends()),
               );
             },
-            icon: Icon(Icons.group, size: 34)
+            icon: Icon(Icons.people_outline, size: 34)
           ),
           Container( 
             child: Icon(
-              Icons.airplay_rounded,
+              Icons.ondemand_video_outlined,
               color: Colors.black,
               size: 34,
             ),  
           ),
           Container( 
             child: Icon(
-              Icons.watch,
+              Icons.storefront,
               color: Colors.black,
               size: 34,
             ),  
           ),
           Container( 
             child: Icon(
-              Icons.search,
+              Icons.notifications_outlined,
               color: Colors.black,
               size: 34,
             ),  
@@ -120,27 +111,24 @@ class landing extends StatelessWidget {
         ],
       ),
       Divider(
-        height: 50,
+        height: 30,
         thickness: 2,
       ),
 
       Row( //ROW Three
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
-
           Stack(
             alignment: const Alignment(0.6, 0.6),
             children: [
               const CircleAvatar(
                 backgroundImage: AssetImage('assets/images/facebook_logo.png'),
                 radius: 25,
-                
               ),
             ]
           ),
-          
           Container( 
-            width: 230,
+            width: 300,
             child: TextField(
               decoration: InputDecoration(
                 enabledBorder: OutlineInputBorder(
@@ -153,40 +141,51 @@ class landing extends StatelessWidget {
           ),
           Container( 
             child: Icon(
-              Icons.image,
-              color: Colors.blue,
+              Icons.photo_library,
+              color: Colors.green,
               size: 34,
             ),  
           ),
         ],
       ),
       Divider(
-        height: 100,
+        height: 40,
         thickness: 10,
       ),
       Row( //ROW Four
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: <Widget>[          
-          Container( 
-            child: Image.asset('assets/images/two.jpeg'), 
-            width: 100,
-            height: 150,
+        children: <Widget>[  
+          LimitedBox(
+            maxWidth: 130,
+            child: ClipRRect(
+                  borderRadius: BorderRadius.circular(14),
+                  child: Image.asset(
+                    "assets/images/two.jpeg"                        
+                  ),
+            ),
           ),
-          Container( 
-            child: Image.asset('assets/images/two.jpeg'), 
-            width: 100,
-            height: 150,
-          ),
-          Container( 
-            child: Image.asset('assets/images/three.jpeg'), 
-            width: 100,
-            height: 150,
-          ),
-          
+          LimitedBox(
+            maxWidth: 130,
+            child: ClipRRect(
+                  borderRadius: BorderRadius.circular(14),
+                  child: Image.asset(
+                    "assets/images/two.jpeg"                        
+                  ),
+            ),
+          ), 
+          LimitedBox(
+            maxWidth: 130,
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(14),
+              child: Image.asset(
+                "assets/images/three.jpeg"                        
+              ),
+            ),
+          ),  
         ],
       ),
       Divider(
-        height: 100,
+        height: 40,
         thickness: 10,
       ),
 
@@ -203,9 +202,7 @@ class landing extends StatelessWidget {
                 
               ),
             ]
-            
           ),
-          
           Container(
             child:Text("SUNO TV, posted a video to playlist \nBreaking News - March 2023",
                 style: TextStyle(
@@ -232,10 +229,10 @@ class landing extends StatelessWidget {
         ],
       ),
       Container( 
-            child: Image.asset('assets/images/feedback.jpeg'), 
-            width: 450,
-            height: 200,
-          ),
+        child: Image.asset('assets/images/feedback.jpeg'), 
+        width: 450,
+        height: 290,
+      ),
     ]),
     );
   }
