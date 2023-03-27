@@ -13,6 +13,8 @@ import 'step_five.dart';
 import 'landing.dart';
 import 'friends.dart';
 import 'video.dart';
+import 'live.dart';
+import 'gaming.dart';
 
 void main() {
   runApp(MaterialApp(

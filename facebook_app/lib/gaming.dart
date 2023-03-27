@@ -1,4 +1,3 @@
-import 'package:facebook_app/gaming.dart';
 import 'package:facebook_app/landing.dart';
 import 'package:facebook_app/live.dart';
 import 'package:flutter/material.dart';
@@ -7,11 +6,11 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: video(),
+    home: gaming(),
   ));
 
 }
-class video extends StatelessWidget {
+class gaming extends StatelessWidget {
 
   @override
  Widget build(BuildContext context) {
@@ -155,12 +154,7 @@ Row( //ROW TWO
           Container(
             margin: EdgeInsets.fromLTRB(0, 0, 0, 0 ),
             child:TextButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) =>  gaming()),
-              );
-            },
+            onPressed: () {},
             child: const Text(' Gaming'),
           ),
           ),
@@ -185,6 +179,34 @@ Row( //ROW TWO
         thickness: 2,
       ),
 
+      Row( //ROW FOUR
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 10, 140, 10 ),
+            child:Text("Recently Watched",
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w600,
+                  color: Colors.black,
+                  // backgroundColor: Color.fromARGB(255, 213, 212, 212),
+                ),
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 10, 0, 10 ),
+            child:Text("See All",
+                style: TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w400,
+                  color: Colors.blue,
+                  // backgroundColor: Color.fromARGB(255, 213, 212, 212),
+                ),
+            ),
+          ),
+        ],
+      ),
+
       Row( //ROW Five
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
@@ -193,75 +215,119 @@ Row( //ROW TWO
             alignment: const Alignment(0.9, 0.9),
             children: [
               const CircleAvatar(
-                backgroundImage: AssetImage('assets/images/feedback.jpeg'),
-                radius: 25,
+                backgroundImage: AssetImage('assets/images/KE.jpeg'),
+                radius: 35,
                 
               ),
             ]
           ),
-          Container(
-            child:Text("Mubashar Lateef Posted a new Video",
-                style: TextStyle(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w400,
-                  color: Colors.black,
-                ),
-            ),
+
+          Stack(
+            alignment: const Alignment(0.9, 0.9),
+            children: [
+              const CircleAvatar(
+                backgroundImage: AssetImage('assets/images/download.jpeg'),
+                radius: 35,
+                
+              ),
+            ]
           ),
-          Container( 
-            child: Icon(
-              Icons.more_horiz_outlined,
-              color: Colors.black,
-              size: 34,
-            ),  
+
+          Stack(
+            alignment: const Alignment(0.9, 0.9),
+            children: [
+              const CircleAvatar(
+                backgroundImage: AssetImage('assets/images/download-2.jpeg'),
+                radius: 35,
+                
+              ),
+            ]
           ),
-          Container( 
-            child: Icon(
-              Icons.close,
-              color: Colors.black,
-              size: 34,
-            ),  
+
+          Stack(
+            alignment: const Alignment(0.9, 0.9),
+            children: [
+              const CircleAvatar(
+                backgroundImage: AssetImage('assets/images/download-3.jpeg'),
+                radius: 35,
+                
+              ),
+            ]
+          ),
+
+          Stack(
+            alignment: const Alignment(0.9, 0.9),
+            children: [
+              const CircleAvatar(
+                backgroundImage: AssetImage('assets/images/download-5.jpeg'),
+                radius: 35,
+                
+              ),
+            ]
           ),
         ],
       ),
-      Container( 
-        child: Image.asset('assets/images/feedback.jpeg'), 
-        width: 450,
-        height: 285,
-      ),
-      Divider(
-        height: 40,
-        thickness: 1,
-      ),
+      
 
       Row( //ROW Three
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
-          Container( 
-            child:Text(
-              'Like',
-              textAlign: TextAlign.center,
-              overflow: TextOverflow.ellipsis,
-              style: const TextStyle(fontWeight: FontWeight.bold),
-            )
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 10, 0, 10 ),
+            child:Text("Gravity\nZone",
+                style: TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w400,
+                  color: Colors.black,
+                  
+                  // backgroundColor: Color.fromARGB(255, 213, 212, 212),
+                ),
+            ),
           ),
-          Container( 
-            child:Text(
-              'Comment',
-              textAlign: TextAlign.center,
-              overflow: TextOverflow.ellipsis,
-              style: const TextStyle(fontWeight: FontWeight.bold),
-            )
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 10, 0, 10 ),
+            child:Text("Vipax",
+                style: TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w400,
+                  color: Colors.black,
+                  // backgroundColor: Color.fromARGB(255, 213, 212, 212),
+                ),
+            ),
           ),
-          Container( 
-            child:Text(
-              'Share',
-              textAlign: TextAlign.center,
-              overflow: TextOverflow.ellipsis,
-              style: const TextStyle(fontWeight: FontWeight.bold),
-            )
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 10, 0, 10 ),
+            child:Text("Klox Gaming",
+                style: TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w400,
+                  color: Colors.black,
+                  // backgroundColor: Color.fromARGB(255, 213, 212, 212),
+                ),
+            ),
           ),
-          
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 10, 0, 10 ),
+            child:Text("ASH OP",
+                style: TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w400,
+                  color: Colors.black,
+                  // backgroundColor: Color.fromARGB(255, 213, 212, 212),
+                ),
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 10, 0, 10 ),
+            child:Text("Real Game\nPlay",
+                style: TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w400,
+                  color: Colors.black,
+                  // backgroundColor: Color.fromARGB(255, 213, 212, 212),
+                ),
+            ),
+          ),
         ],
       ),
       Divider(
@@ -277,18 +343,29 @@ Row( //ROW TWO
             alignment: const Alignment(0.9, 0.9),
             children: [
               const CircleAvatar(
-                backgroundImage: AssetImage('assets/images/facebook_logo.png'),
+                backgroundImage: AssetImage('assets/images/download-4.jpeg'),
                 radius: 25,
                 
               ),
             ]
           ),
           Container(
-            child:Text("Mubashar Lateef Posted a new Video",
+            margin: EdgeInsets.fromLTRB(0, 0, 50, 0 ),
+            child:Text("Firehoic Gaming",
                 style: TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.w400,
                   color: Colors.black,
+                ),
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 0, 0, 0 ),
+            child:Text("Follow",
+                style: TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w400,
+                  color: Colors.blue,
                 ),
             ),
           ),
@@ -308,13 +385,23 @@ Row( //ROW TWO
           ),
         ],
       ),
+      Container(
+        margin: EdgeInsets.fromLTRB(0, 10, 170, 10 ),
+        child:Text("bramble the mountain king boy",
+            style: TextStyle(
+              fontSize: 14,
+              fontWeight: FontWeight.w400,
+              color: Colors.black,
+            ),
+        ),
+      ),
       Container( 
-        child: Image.asset('assets/images/feedback-1.jpeg'), 
+        child: Image.asset('assets/images/8f-c.png'), 
         width: 450,
         height: 285,
       ),
       Divider(
-        height: 0,
+        height: 40,
         thickness: 1,
       ),
 

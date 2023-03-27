@@ -1,17 +1,15 @@
-import 'package:facebook_app/gaming.dart';
 import 'package:facebook_app/landing.dart';
-import 'package:facebook_app/live.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: video(),
+    home: live(),
   ));
 
 }
-class video extends StatelessWidget {
+class live extends StatelessWidget {
 
   @override
  Widget build(BuildContext context) {
@@ -143,24 +141,14 @@ Row( //ROW TWO
           Container(
             margin: EdgeInsets.fromLTRB(0, 0, 0, 0 ),
             child:TextButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) =>  live()),
-              );
-            },
+            onPressed: () {},
             child: const Text(' Live'),
           ),
           ),
           Container(
             margin: EdgeInsets.fromLTRB(0, 0, 0, 0 ),
             child:TextButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) =>  gaming()),
-              );
-            },
+            onPressed: () {},
             child: const Text(' Gaming'),
           ),
           ),

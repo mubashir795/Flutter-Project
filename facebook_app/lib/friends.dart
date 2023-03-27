@@ -4,23 +4,21 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 void main() {
   runApp(MaterialApp(
-    theme: ThemeData(
-      primaryColor: Colors.blue
-
-    ),
     debugShowCheckedModeBanner: false,
     home: friends(),
   ));
 
 }
-
 class friends extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(children: <Widget>[
 
-      Row( //ROW ONE
+  @override
+ Widget build(BuildContext context) {
+    return Scaffold(
+      
+      body: SingleChildScrollView(
+          child: Column(
+        children: <Widget>[
+          Row( //ROW ONE
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
           SizedBox(height: 80,),
@@ -442,7 +440,55 @@ Row( //ROW TWO
           ),
         ],
       ),
-         ]),
+      Row( //ROW Seven
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          SizedBox(
+            height: 100, // <-- SEE HERE
+          ),
+          Stack(
+            alignment: const Alignment(0.6, 0.6),
+            children: [
+              const CircleAvatar(
+                backgroundImage: AssetImage('assets/images/one.jpeg'),
+                radius: 45,
+                
+              ),
+            ]
+          ),
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 0, 10, 50 ),
+            child:Text("Mubashar Lateef",
+              style: TextStyle(
+                fontSize: 14,
+                fontWeight: FontWeight.w400,
+                color: Colors.black,
+                // backgroundColor: Color.fromARGB(255, 213, 212, 212),
+              ),
+            ),
+          ),
+          TextButton(
+            style: TextButton.styleFrom(
+                foregroundColor: Colors.white,
+                backgroundColor: Colors.blue,
+                textStyle: const TextStyle(fontSize: 14)),
+            onPressed: () {},
+            child: const Text('Confirm'),
+          ),
+          TextButton(
+            style: TextButton.styleFrom(
+                foregroundColor: Colors.black,
+                backgroundColor: Color.fromARGB(255, 224, 223, 223),
+                textStyle: const TextStyle(fontSize: 14)),
+            onPressed: () {},
+            child: const Text('Delete'),
+          ),
+        ],
+      ),
+        ],
+      )),
     );
   }
 }
+
+
