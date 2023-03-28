@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:sticky_headers/sticky_headers.dart';
 import 'friends.dart';
 import 'video.dart';
 import 'live.dart';
 import 'gaming.dart';
+import 'reels.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -17,7 +19,6 @@ class landing extends StatelessWidget {
   @override
  Widget build(BuildContext context) {
     return Scaffold(
-      
       body: SingleChildScrollView(
           child: Column(
         children: <Widget>[
@@ -25,7 +26,7 @@ class landing extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
           SizedBox(height: 50,),
-          Container(
+           Container(
             margin: EdgeInsets.fromLTRB(0, 50, 70, 20 ),
             child:Text("facebook",
                 style: TextStyle(
@@ -35,6 +36,7 @@ class landing extends StatelessWidget {
                 ),
             ),
           ),
+          
           Container(
             margin: EdgeInsets.fromLTRB(0, 50, 0, 20 ),
             child:CircleAvatar(backgroundColor: Color.fromARGB(255, 224, 223, 223),

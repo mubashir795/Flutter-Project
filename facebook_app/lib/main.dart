@@ -15,6 +15,9 @@ import 'friends.dart';
 import 'video.dart';
 import 'live.dart';
 import 'gaming.dart';
+import 'reels.dart';
+import 'suggestion.dart';
+import 'your_friends.dart';
 
 void main() {
   runApp(MaterialApp(

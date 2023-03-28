@@ -1,6 +1,7 @@
 import 'package:facebook_app/gaming.dart';
 import 'package:facebook_app/landing.dart';
 import 'package:facebook_app/live.dart';
+import 'package:facebook_app/reels.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -167,7 +168,12 @@ Row( //ROW TWO
           Container(
             margin: EdgeInsets.fromLTRB(0, 0, 0, 0 ),
             child:TextButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) =>  reels()),
+              );
+            },
             child: const Text(' Reels'),
           ),
           ),
