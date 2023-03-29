@@ -1,5 +1,8 @@
+import 'package:facebook_app/friends.dart';
 import 'package:facebook_app/landing.dart';
 import 'package:facebook_app/live.dart';
+import 'package:facebook_app/reels.dart';
+import 'package:facebook_app/video.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -38,10 +41,14 @@ class gaming extends StatelessWidget {
           
           Container( 
             margin: EdgeInsets.fromLTRB(0, 50, 15, 0 ),
-            child: Icon(
-              Icons.people_outline,
-              color: Colors.black,
-              size: 34,
+            child: IconButton(
+              onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) =>  friends()),
+              );
+            },
+            icon: Icon(Icons.people_outline, size: 34, color: Colors.black,)
             ),  
           ),
           Container( 
@@ -135,7 +142,12 @@ Row( //ROW TWO
                 )
               )
             ),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) =>  video()),
+              );
+            },
             child: const Text('For You'),
           ),
           ),
@@ -161,7 +173,12 @@ Row( //ROW TWO
           Container(
             margin: EdgeInsets.fromLTRB(0, 0, 0, 0 ),
             child:TextButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) =>  reels()),
+              );
+            },
             child: const Text(' Reels'),
           ),
           ),

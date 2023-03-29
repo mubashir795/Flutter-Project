@@ -1,5 +1,7 @@
+import 'package:facebook_app/gaming.dart';
 import 'package:facebook_app/landing.dart';
 import 'package:facebook_app/live.dart';
+import 'package:facebook_app/video.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -79,7 +81,12 @@ class reels extends StatelessWidget {
                 )
               )
             ),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) =>  video()),
+              );
+            },
             child: const Text('For You'),
           ),
           ),
@@ -98,7 +105,12 @@ class reels extends StatelessWidget {
           Container(
             margin: EdgeInsets.fromLTRB(0, 0, 0, 0 ),
             child:TextButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) =>  gaming()),
+              );
+            },
             child: const Text(' Gaming'),
           ),
           ),

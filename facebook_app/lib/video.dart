@@ -1,9 +1,11 @@
+import 'package:facebook_app/friends.dart';
 import 'package:facebook_app/gaming.dart';
 import 'package:facebook_app/landing.dart';
 import 'package:facebook_app/live.dart';
 import 'package:facebook_app/reels.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'market.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -40,10 +42,14 @@ class video extends StatelessWidget {
           
           Container( 
             margin: EdgeInsets.fromLTRB(0, 50, 15, 0 ),
-            child: Icon(
-              Icons.people_outline,
-              color: Colors.black,
-              size: 34,
+            child: IconButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) =>  friends()),
+                );
+              },
+              icon: Icon(Icons.people_outline, size: 34, color: Colors.black,)
             ),  
           ),
           Container( 
@@ -56,10 +62,14 @@ class video extends StatelessWidget {
           ),
           Container( 
             margin: EdgeInsets.fromLTRB(0, 50, 15, 0 ),
-            child: Icon(
-              Icons.storefront,
-              color: Colors.black,
-              size: 34,
+            child: IconButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) =>  market()),
+                );
+              },
+              icon: Icon(Icons.storefront, size: 34, color: Colors.black,)
             ),  
           ),
           Container( 

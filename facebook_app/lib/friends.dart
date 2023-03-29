@@ -1,4 +1,6 @@
 import 'package:facebook_app/landing.dart';
+import 'package:facebook_app/market.dart';
+import 'package:facebook_app/video.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'suggestion.dart';
@@ -47,18 +49,26 @@ class friends extends StatelessWidget {
           ),
           Container( 
             margin: EdgeInsets.fromLTRB(0, 50, 15, 0 ),
-            child: Icon(
-              Icons.ondemand_video_outlined,
-              color: Colors.black,
-              size: 34,
+            child: IconButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) =>  video()),
+                );
+              },
+              icon: Icon(Icons.ondemand_video_outlined, size: 34, color: Colors.black,)
             ),  
           ),
           Container( 
             margin: EdgeInsets.fromLTRB(0, 50, 15, 0 ),
-            child: Icon(
-              Icons.storefront,
-              color: Colors.black,
-              size: 34,
+            child: IconButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) =>  market()),
+                );
+              },
+              icon: Icon(Icons.storefront, size: 34, color: Colors.black,)
             ),  
           ),
           Container( 

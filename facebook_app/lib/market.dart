@@ -1,19 +1,22 @@
 import 'package:facebook_app/friends.dart';
 import 'package:facebook_app/gaming.dart';
 import 'package:facebook_app/landing.dart';
+import 'package:facebook_app/live.dart';
 import 'package:facebook_app/reels.dart';
-import 'package:facebook_app/video.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'suggestion.dart';
+import 'your_friends.dart';
+import 'categories.dart';
 
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: live(),
+    home: market(),
   ));
 
 }
-class live extends StatelessWidget {
+class market extends StatelessWidget {
 
   @override
  Widget build(BuildContext context) {
@@ -53,10 +56,14 @@ class live extends StatelessWidget {
           ),
           Container( 
             margin: EdgeInsets.fromLTRB(0, 50, 15, 0 ),
-            child: Icon(
-              Icons.ondemand_video_outlined,
-              color: Colors.black,
-              size: 34,
+            child: IconButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) =>  friends()),
+                );
+              },
+              icon: Icon(Icons.ondemand_video_outlined, size: 34, color: Colors.black,)
             ),  
           ),
           Container( 
@@ -97,10 +104,10 @@ Row( //ROW TWO
         children: <Widget>[
           SizedBox(height: 50,),
           Container(
-            margin: EdgeInsets.fromLTRB(0, 0, 200, 10 ),
-            child:Text("Watch",
+            margin: EdgeInsets.fromLTRB(0, 0, 170, 10 ),
+            child:Text("Marketplace",
                 style: TextStyle(
-                  fontSize: 30,
+                  fontSize: 25,
                   fontWeight: FontWeight.w800,
                   color: Colors.black,
                 ),
@@ -133,7 +140,7 @@ Row( //ROW TWO
             margin: EdgeInsets.fromLTRB(0, 0, 0, 0 ),
             child:TextButton(
             style: ButtonStyle(
-              padding:MaterialStateProperty.all(EdgeInsets.all(10)),
+              padding:MaterialStateProperty.all(EdgeInsets.fromLTRB(50,0,50,0)),
               foregroundColor: MaterialStateProperty.all<Color>(Colors.black),
               backgroundColor: MaterialStateProperty.all<Color>(Color.fromARGB(255, 224, 223, 223)),
               shape: MaterialStateProperty.all<RoundedRectangleBorder>(
@@ -145,224 +152,177 @@ Row( //ROW TWO
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) =>  video()),
+                MaterialPageRoute(builder: (context) =>  Suggestion()),
               );
             },
-            child: const Text('For You'),
+            child: const Text('Sell'),
           ),
           ),
           Container(
             margin: EdgeInsets.fromLTRB(0, 0, 0, 0 ),
             child:TextButton(
-            onPressed: () {},
-            child: const Text(' Live'),
-          ),
-          ),
-          Container(
-            margin: EdgeInsets.fromLTRB(0, 0, 0, 0 ),
-            child:TextButton(
+            style: ButtonStyle(
+              padding:MaterialStateProperty.all(EdgeInsets.fromLTRB(50,0,50,0)),
+              foregroundColor: MaterialStateProperty.all<Color>(Colors.black),
+              backgroundColor: MaterialStateProperty.all<Color>(Color.fromARGB(255, 224, 223, 223)),
+              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(18.0),      
+                )
+              ),
+            ),
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) =>  gaming()),
+                MaterialPageRoute(builder: (context) =>  categories()),
               );
             },
-            child: const Text(' Gaming'),
-          ),
-          ),
-          Container(
-            margin: EdgeInsets.fromLTRB(0, 0, 0, 0 ),
-            child:TextButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) =>  reels()),
-              );
-            },
-            child: const Text(' Reels'),
-          ),
-          ),
-          Container(
-            margin: EdgeInsets.fromLTRB(0, 0, 0, 0 ),
-            child:TextButton(
-            onPressed: () {},
-            child: const Text(' Following'),
+            child: const Text('Categories'),
           ),
           ),
         ],
       ),
-      Divider(
-        height: 29,
-        thickness: 2,
-      ),
 
-      Row( //ROW Five
+      Row( //ROW SIX
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
-
-          Stack(
-            alignment: const Alignment(0.9, 0.9),
-            children: [
-              const CircleAvatar(
-                backgroundImage: AssetImage('assets/images/feedback.jpeg'),
-                radius: 25,
-                
-              ),
-            ]
-          ),
           Container(
-            child:Text("Mubashar Lateef Posted a new Video",
+            margin: EdgeInsets.fromLTRB(0, 10, 100, 10 ),
+            child:Text("Today's Picks",
                 style: TextStyle(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w400,
+                  fontSize: 18,
+                  fontWeight: FontWeight.w500,
                   color: Colors.black,
+                  // backgroundColor: Color.fromARGB(255, 213, 212, 212),
                 ),
             ),
           ),
-          Container( 
-            child: Icon(
-              Icons.more_horiz_outlined,
-              color: Colors.black,
-              size: 34,
-            ),  
-          ),
-          Container( 
-            child: Icon(
-              Icons.close,
-              color: Colors.black,
-              size: 34,
-            ),  
-          ),
-        ],
-      ),
-      Container( 
-        child: Image.asset('assets/images/feedback.jpeg'), 
-        width: 450,
-        height: 285,
-      ),
-      Divider(
-        height: 40,
-        thickness: 1,
-      ),
-
-      Row( //ROW Three
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: <Widget>[
-          Container( 
-            child:Text(
-              'Like',
-              textAlign: TextAlign.center,
-              overflow: TextOverflow.ellipsis,
-              style: const TextStyle(fontWeight: FontWeight.bold),
-            )
-          ),
-          Container( 
-            child:Text(
-              'Comment',
-              textAlign: TextAlign.center,
-              overflow: TextOverflow.ellipsis,
-              style: const TextStyle(fontWeight: FontWeight.bold),
-            )
-          ),
-          Container( 
-            child:Text(
-              'Share',
-              textAlign: TextAlign.center,
-              overflow: TextOverflow.ellipsis,
-              style: const TextStyle(fontWeight: FontWeight.bold),
-            )
-          ),
-          
-        ],
-      ),
-      Divider(
-        height: 39,
-        thickness: 10,
-      ),
-
-      Row( //ROW Five
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: <Widget>[
-
-          Stack(
-            alignment: const Alignment(0.9, 0.9),
+          Row(
+            mainAxisSize: MainAxisSize.min,
             children: [
-              const CircleAvatar(
-                backgroundImage: AssetImage('assets/images/facebook_logo.png'),
-                radius: 25,
-                
-              ),
-            ]
+              Icon(Icons.location_on),
+              Text('Lahore, Punjab, Pakistan'),
+              
+            ],
           ),
+        ],
+      ),
+      
+      Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Expanded(
+            child: Image.asset('assets/images/feedback-1.jpeg'),
+          ),
+          Expanded(
+            child: Image.asset('assets/images/feedback-1.jpeg'),
+          ),
+        ],
+      ),
+      Row( //ROW SIX
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
           Container(
-            child:Text("Mubashar Lateef Posted a new Video",
+            margin: EdgeInsets.fromLTRB(0, 10, 0, 10 ),
+            child:Text("Canon Camera For Sale",
                 style: TextStyle(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w400,
+                  fontSize: 15,
+                  fontWeight: FontWeight.w300,
                   color: Colors.black,
+                  // backgroundColor: Color.fromARGB(255, 213, 212, 212),
                 ),
             ),
           ),
-          Container( 
-            child: Icon(
-              Icons.more_horiz_outlined,
-              color: Colors.black,
-              size: 34,
-            ),  
-          ),
-          Container( 
-            child: Icon(
-              Icons.close,
-              color: Colors.black,
-              size: 34,
-            ),  
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 10, 0, 10 ),
+            child:Text("Canon Camera For Sale",
+                style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w300,
+                  color: Colors.black,
+                  // backgroundColor: Color.fromARGB(255, 213, 212, 212),
+                ),
+            ),
           ),
         ],
       ),
-      Container( 
-        child: Image.asset('assets/images/feedback-1.jpeg'), 
-        width: 450,
-        height: 285,
+      Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Expanded(
+            child: Image.asset('assets/images/feedback.jpeg'),
+          ),
+          Expanded(
+            child: Image.asset('assets/images/feedback.jpeg'),
+          ),
+        ],
       ),
-      Divider(
-        height: 0,
-        thickness: 1,
-      ),
-
-      Row( //ROW Three
+      Row( //ROW SIX
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
-          Container( 
-            child:Text(
-              'Like',
-              textAlign: TextAlign.center,
-              overflow: TextOverflow.ellipsis,
-              style: const TextStyle(fontWeight: FontWeight.bold),
-            )
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 10, 0, 10 ),
+            child:Text("Canon Camera For Sale",
+                style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w300,
+                  color: Colors.black,
+                  // backgroundColor: Color.fromARGB(255, 213, 212, 212),
+                ),
+            ),
           ),
-          Container( 
-            child:Text(
-              'Comment',
-              textAlign: TextAlign.center,
-              overflow: TextOverflow.ellipsis,
-              style: const TextStyle(fontWeight: FontWeight.bold),
-            )
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 10, 0, 10 ),
+            child:Text("Canon Camera For Sale",
+                style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w300,
+                  color: Colors.black,
+                  // backgroundColor: Color.fromARGB(255, 213, 212, 212),
+                ),
+            ),
           ),
-          Container( 
-            child:Text(
-              'Share',
-              textAlign: TextAlign.center,
-              overflow: TextOverflow.ellipsis,
-              style: const TextStyle(fontWeight: FontWeight.bold),
-            )
-          ),
-          
         ],
       ),
-       Divider(
-        height: 40,
-        thickness: 10,
+      Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Expanded(
+            child: Image.asset('assets/images/download-4.jpeg'),
+          ),
+          Expanded(
+            child: Image.asset('assets/images/download-4.jpeg'),
+          ),
+        ],
       ),
+      Row( //ROW SIX
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 10, 0, 10 ),
+            child:Text("Canon Camera For Sale",
+                style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w300,
+                  color: Colors.black,
+                  // backgroundColor: Color.fromARGB(255, 213, 212, 212),
+                ),
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 10, 0, 10 ),
+            child:Text("Canon Camera For Sale",
+                style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w300,
+                  color: Colors.black,
+                  // backgroundColor: Color.fromARGB(255, 213, 212, 212),
+                ),
+            ),
+          ),
+        ],
+      ),
+      
         ],
       )),
     );

@@ -6,6 +6,7 @@ import 'video.dart';
 import 'live.dart';
 import 'gaming.dart';
 import 'reels.dart';
+import 'market.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -98,10 +99,14 @@ class landing extends StatelessWidget {
             icon: Icon(Icons.ondemand_video_outlined, size: 34)
           ),
           Container( 
-            child: Icon(
-              Icons.storefront,
-              color: Colors.black,
-              size: 34,
+            child: IconButton(
+              onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) =>  market()),
+              );
+            },
+            icon: Icon(Icons.storefront, size: 34)
             ),  
           ),
           Container( 

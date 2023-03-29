@@ -18,6 +18,8 @@ import 'gaming.dart';
 import 'reels.dart';
 import 'suggestion.dart';
 import 'your_friends.dart';
+import 'market.dart';
+import 'categories.dart';
 
 void main() {
   runApp(MaterialApp(
