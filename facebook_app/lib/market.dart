@@ -2,6 +2,7 @@ import 'package:facebook_app/friends.dart';
 import 'package:facebook_app/gaming.dart';
 import 'package:facebook_app/landing.dart';
 import 'package:facebook_app/live.dart';
+import 'package:facebook_app/market_search.dart';
 import 'package:facebook_app/reels.dart';
 import 'package:facebook_app/video.dart';
 import 'package:flutter/material.dart';
@@ -139,9 +140,14 @@ Row( //ROW TWO
           Container(
             margin: EdgeInsets.fromLTRB(0, 0, 0, 10 ),
             child:CircleAvatar(backgroundColor: Color.fromARGB(255, 224, 223, 223),
-              child: Icon(
-                Icons.search,
-                color: Colors.black,
+              child: IconButton(
+                onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) =>  market_search()),
+                );
+              },
+              icon: Icon(Icons.search, size: 34, color: Colors.black,)
                 ),
               ),
           ),

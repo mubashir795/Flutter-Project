@@ -149,6 +149,7 @@ class landing extends StatelessWidget {
                 backgroundImage: AssetImage('assets/images/facebook_logo.png'),
                 radius: 25,
               ),
+              
             ]
           ),
           Container( 

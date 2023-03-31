@@ -21,6 +21,8 @@ import 'your_friends.dart';
 import 'market.dart';
 import 'categories.dart';
 import 'notification.dart';
+import 'search_videos.dart';
+import 'market_search.dart';
 
 void main() {
   runApp(MaterialApp(
