@@ -20,6 +20,7 @@ import 'suggestion.dart';
 import 'your_friends.dart';
 import 'market.dart';
 import 'categories.dart';
+import 'notification.dart';
 
 void main() {
   runApp(MaterialApp(

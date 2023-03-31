@@ -1,3 +1,4 @@
+import 'package:facebook_app/following.dart';
 import 'package:facebook_app/friends.dart';
 import 'package:facebook_app/landing.dart';
 import 'package:facebook_app/live.dart';
@@ -132,16 +133,6 @@ Row( //ROW TWO
           Container(
             margin: EdgeInsets.fromLTRB(0, 0, 0, 0 ),
             child:TextButton(
-            style: ButtonStyle(
-              padding:MaterialStateProperty.all(EdgeInsets.all(10)),
-              foregroundColor: MaterialStateProperty.all<Color>(Colors.black),
-              backgroundColor: MaterialStateProperty.all<Color>(Color.fromARGB(255, 224, 223, 223)),
-              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(18.0),      
-                )
-              )
-            ),
             onPressed: () {
               Navigator.push(
                 context,
@@ -166,8 +157,23 @@ Row( //ROW TWO
           Container(
             margin: EdgeInsets.fromLTRB(0, 0, 0, 0 ),
             child:TextButton(
-            onPressed: () {},
-            child: const Text(' Gaming'),
+            style: ButtonStyle(
+              padding:MaterialStateProperty.all(EdgeInsets.all(10)),
+              foregroundColor: MaterialStateProperty.all<Color>(Colors.black),
+              backgroundColor: MaterialStateProperty.all<Color>(Color.fromARGB(255, 224, 223, 223)),
+              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(18.0),      
+                )
+              )
+            ),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) =>  gaming()),
+              );
+            },
+            child: const Text('Gaming'),
           ),
           ),
           Container(
@@ -185,7 +191,12 @@ Row( //ROW TWO
           Container(
             margin: EdgeInsets.fromLTRB(0, 0, 0, 0 ),
             child:TextButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) =>  following()),
+              );
+            },
             child: const Text(' Following'),
           ),
           ),

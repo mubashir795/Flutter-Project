@@ -78,9 +78,15 @@ flutter:
     - assets/images/download.jpeg
     - assets/images/KE.jpeg
     - assets/images/8f-c.png
+    - assets/images/ary.png
+    - assets/images/current.jpeg
+    - assets/images/suno.jpeg
+    - assets/images/pcb.png
+    - assets/images/icc.jpeg
+    - assets/images/ary2.jpeg
    
 
-  # An image asset can refer to one or more resolution-specific "variants", see
+  # An image asset can refer to one or more resolution-specific "variants", see 
   # https://flutter.dev/assets-and-images/#resolution-aware
 
   # For details regarding adding assets from package dependencies, see

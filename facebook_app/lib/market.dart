@@ -3,11 +3,13 @@ import 'package:facebook_app/gaming.dart';
 import 'package:facebook_app/landing.dart';
 import 'package:facebook_app/live.dart';
 import 'package:facebook_app/reels.dart';
+import 'package:facebook_app/video.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'suggestion.dart';
 import 'your_friends.dart';
 import 'categories.dart';
+import 'user.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -60,7 +62,7 @@ class market extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) =>  friends()),
+                  MaterialPageRoute(builder: (context) =>  video()),
                 );
               },
               icon: Icon(Icons.ondemand_video_outlined, size: 34, color: Colors.black,)
@@ -113,14 +115,26 @@ Row( //ROW TWO
                 ),
             ),
           ),
-          Container(
+          // Container(
+          //   margin: EdgeInsets.fromLTRB(0, 0, 0, 10 ),
+          //   child:CircleAvatar(backgroundColor: Color.fromARGB(255, 224, 223, 223),
+          //     child: Icon(
+          //       Icons.person,
+          //       color: Colors.black,
+          //       ),
+          //     ),
+          // ),
+          Container( 
             margin: EdgeInsets.fromLTRB(0, 0, 0, 10 ),
-            child:CircleAvatar(backgroundColor: Color.fromARGB(255, 224, 223, 223),
-              child: Icon(
-                Icons.person,
-                color: Colors.black,
-                ),
-              ),
+            child: IconButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) =>  user()),
+                );
+              },
+              icon: Icon(Icons.person, size: 34, color: Colors.black,)
+            ),  
           ),
           Container(
             margin: EdgeInsets.fromLTRB(0, 0, 0, 10 ),

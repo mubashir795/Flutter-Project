@@ -7,6 +7,7 @@ import 'live.dart';
 import 'gaming.dart';
 import 'reels.dart';
 import 'market.dart';
+import 'notification.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -74,10 +75,14 @@ class landing extends StatelessWidget {
         children: <Widget>[
           
           Container( 
-            child: Icon(
-              Icons.home_outlined,
-              color: Colors.black,
-              size: 34,
+            child: IconButton(
+              onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) =>  landing()),
+              );
+            },
+            icon: Icon(Icons.home_outlined, size: 34)
             ),  
           ),
           IconButton(
@@ -110,10 +115,14 @@ class landing extends StatelessWidget {
             ),  
           ),
           Container( 
-            child: Icon(
-              Icons.notifications_outlined,
-              color: Colors.black,
-              size: 34,
+            child: IconButton(
+              onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) =>  notification()),
+              );
+            },
+            icon: Icon(Icons.notifications_outlined, size: 34)
             ),  
           ),
           Container( 
