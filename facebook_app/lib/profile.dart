@@ -1,4 +1,7 @@
+import 'package:facebook_app/edit_profile.dart';
 import 'package:facebook_app/landing.dart';
+import 'package:facebook_app/profile_setting.dart';
+import 'package:facebook_app/see_friends.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'suggestion.dart';
@@ -148,7 +151,7 @@ class profile extends StatelessWidget {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) =>  landing()),
+                MaterialPageRoute(builder: (context) =>  profile_setting()),
               );
             },
             child: Icon(
@@ -387,6 +390,525 @@ class profile extends StatelessWidget {
                   // backgroundColor: Color.fromARGB(255, 213, 212, 212),
                 ),
             ),
+          ),
+        ],
+      ),
+      Row( //ROW Three
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 50, 0, 0 ),
+            child:TextButton(
+            style: ButtonStyle(
+              padding:MaterialStateProperty.all(EdgeInsets.fromLTRB(150, 0, 150, 0)),
+              foregroundColor: MaterialStateProperty.all<Color>(Colors.blue),
+              backgroundColor: MaterialStateProperty.all<Color>(Color.fromARGB(255, 170, 211, 255)),
+              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(5.0),      
+                )
+              ),
+            ),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) =>  edit_profile()),
+              );
+            },
+            child: const Text('Edit public details'),
+          ),
+          ),
+        ],
+      ),
+      Divider(
+        height: 30,
+        thickness: 1,
+      ),
+      Row( //ROW SIX
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 10, 180, 10 ),
+            child:Text("Friends",
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.black,
+                  // backgroundColor: Color.fromARGB(255, 213, 212, 212),
+                ),
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.fromLTRB(40, 10, 0, 10 ),
+            child:Text("Find Friends",
+                style: TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w400,
+                  color: Colors.blue,
+                  // backgroundColor: Color.fromARGB(255, 213, 212, 212),
+                ),
+            ),
+          ),
+        ],
+      ),
+      Row( //ROW Four
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[  
+          LimitedBox(
+            maxWidth: 120,
+            child: ClipRRect(
+                  borderRadius: BorderRadius.circular(5),
+                  child: Image.asset(
+                    "assets/images/feedback.jpeg"                        
+                  ),
+            ),
+          ),
+          LimitedBox(
+            maxWidth: 120,
+            child: ClipRRect(
+                  borderRadius: BorderRadius.circular(5),
+                  child: Image.asset(
+                    "assets/images/feedback.jpeg"                        
+                  ),
+            ),
+          ), 
+          LimitedBox(
+            maxWidth: 120,
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(5),
+              child: Image.asset(
+                "assets/images/feedback.jpeg"                        
+              ),
+            ),
+          ),  
+        ],
+      ),
+      
+      Row( //ROW Three
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 10, 0, 10 ),
+            child:Text("Amir Mehsud",
+                style: TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w400,
+                  color: Colors.black,
+                  
+                  // backgroundColor: Color.fromARGB(255, 213, 212, 212),
+                ),
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 10, 0, 10 ),
+            child:Text("Mubashar Lateef",
+                style: TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w400,
+                  color: Colors.black,
+                  // backgroundColor: Color.fromARGB(255, 213, 212, 212),
+                ),
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 10, 0, 10 ),
+            child:Text("Wasi Haider",
+                style: TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w400,
+                  color: Colors.black,
+                  // backgroundColor: Color.fromARGB(255, 213, 212, 212),
+                ),
+            ),
+          ),
+        ],
+      ),
+      Row( //ROW Four
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[  
+          LimitedBox(
+            maxWidth: 120,
+            child: ClipRRect(
+                  borderRadius: BorderRadius.circular(5),
+                  child: Image.asset(
+                    "assets/images/feedback.jpeg"                        
+                  ),
+            ),
+          ),
+          LimitedBox(
+            maxWidth: 120,
+            child: ClipRRect(
+                  borderRadius: BorderRadius.circular(5),
+                  child: Image.asset(
+                    "assets/images/feedback.jpeg"                        
+                  ),
+            ),
+          ), 
+          LimitedBox(
+            maxWidth: 120,
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(5),
+              child: Image.asset(
+                "assets/images/feedback.jpeg"                        
+              ),
+            ),
+          ),  
+        ],
+      ),
+      Row( //ROW Three
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 10, 0, 10 ),
+            child:Text("Amir Mehsud",
+                style: TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w400,
+                  color: Colors.black,
+                  
+                  // backgroundColor: Color.fromARGB(255, 213, 212, 212),
+                ),
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 10, 0, 10 ),
+            child:Text("Mubashar Lateef",
+                style: TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w400,
+                  color: Colors.black,
+                  // backgroundColor: Color.fromARGB(255, 213, 212, 212),
+                ),
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 10, 0, 10 ),
+            child:Text("Wasi Haider",
+                style: TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w400,
+                  color: Colors.black,
+                  // backgroundColor: Color.fromARGB(255, 213, 212, 212),
+                ),
+            ),
+          ),
+        ],
+      ),
+      Row( //ROW Three
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 10, 0, 0 ),
+            child:TextButton(
+            style: ButtonStyle(
+              padding:MaterialStateProperty.all(EdgeInsets.fromLTRB(160, 0, 160, 0)),
+              foregroundColor: MaterialStateProperty.all<Color>(Colors.black),
+              backgroundColor: MaterialStateProperty.all<Color>(Color.fromARGB(255, 224, 223, 223)),
+              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(5.0),      
+                )
+              ),
+            ),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) =>  see_friends()),
+              );
+            },
+            child: const Text('See all friends'),
+          ),
+          ),
+        ],
+      ),
+      Divider(
+        height: 30,
+        thickness: 15,
+      ),
+      Row( //ROW SIX
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 10, 210, 10 ),
+            child:Text("Posts",
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.black,
+                  // backgroundColor: Color.fromARGB(255, 213, 212, 212),
+                ),
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.fromLTRB(70, 10, 0, 10 ),
+            child:Text("Filters",
+                style: TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w400,
+                  color: Colors.blue,
+                  // backgroundColor: Color.fromARGB(255, 213, 212, 212),
+                ),
+            ),
+          ),
+        ],
+      ),
+      Row( //ROW Seven
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          SizedBox(
+            height: 100, // <-- SEE HERE
+          ),
+          Stack(
+            alignment: const Alignment(0.6, 0.6),
+            children: [
+              const CircleAvatar(
+                backgroundImage: AssetImage('assets/images/two.jpeg'),
+                radius: 35,
+                
+              ),
+            ]
+          ),
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 0, 130, 0 ),
+            child:Text("What's on your mind?",
+              style: TextStyle(
+                fontSize: 14,
+                fontWeight: FontWeight.w400,
+                color: Colors.black,
+                // backgroundColor: Color.fromARGB(255, 213, 212, 212),
+              ),
+            ),
+          ),
+          Container( 
+            child: Icon(
+              Icons.photo_library,
+              color: Colors.green,
+              size: 34,
+            ),  
+          ),
+        ],
+      ),
+      Divider(
+        height: 30,
+        thickness: 1,
+      ),
+      Row( //ROW Three
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 0, 20, 0 ),
+            child:TextButton(
+            style: ButtonStyle(
+              padding:MaterialStateProperty.all(EdgeInsets.all(10)),
+              foregroundColor: MaterialStateProperty.all<Color>(Colors.black),
+              backgroundColor: MaterialStateProperty.all<Color>(Color.fromARGB(255, 224, 223, 223)),
+              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15.0),      
+                )
+              ),
+            ),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) =>  landing()),
+              );
+            },
+            child: const Text('Reels'),
+          ),
+          ),
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 0, 250, 0 ),
+            child:TextButton(
+            style: ButtonStyle(
+              padding:MaterialStateProperty.all(EdgeInsets.all(10)),
+              foregroundColor: MaterialStateProperty.all<Color>(Colors.black),
+              backgroundColor: MaterialStateProperty.all<Color>(Color.fromARGB(255, 224, 223, 223)),
+              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15.0),      
+                )
+              ),
+            ),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) =>  landing()),
+              );
+            },
+            child: const Text('Live'),
+          ),
+          ),
+        ],
+      ),
+      Divider(
+        height: 30,
+        thickness: 1,
+      ),
+      Row( //ROW Three
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 10, 0, 0 ),
+            child:TextButton(
+            style: ButtonStyle(
+              padding:MaterialStateProperty.all(EdgeInsets.fromLTRB(160, 0, 160, 0)),
+              foregroundColor: MaterialStateProperty.all<Color>(Colors.black),
+              backgroundColor: MaterialStateProperty.all<Color>(Color.fromARGB(255, 224, 223, 223)),
+              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(5.0),      
+                )
+              ),
+            ),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) =>  landing()),
+              );
+            },
+            child: const Text('Manage posts'),
+          ),
+          ),
+        ],
+      ),
+      Divider(
+        height: 30,
+        thickness: 15,
+      ),
+      Row( //ROW Three
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 0, 20, 0 ),
+            child:TextButton(
+            style: ButtonStyle(
+              padding:MaterialStateProperty.all(EdgeInsets.all(10)),
+              foregroundColor: MaterialStateProperty.all<Color>(Colors.black),
+              backgroundColor: MaterialStateProperty.all<Color>(Color.fromARGB(255, 224, 223, 223)),
+              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15.0),      
+                )
+              ),
+            ),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) =>  landing()),
+              );
+            },
+            child: const Text('Photos'),
+          ),
+          ),
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 0, 20, 0 ),
+            child:TextButton(
+            style: ButtonStyle(
+              padding:MaterialStateProperty.all(EdgeInsets.all(10)),
+              foregroundColor: MaterialStateProperty.all<Color>(Colors.black),
+              backgroundColor: MaterialStateProperty.all<Color>(Color.fromARGB(255, 224, 223, 223)),
+              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15.0),      
+                )
+              ),
+            ),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) =>  landing()),
+              );
+            },
+            child: const Text('Avatars'),
+          ),
+          ),
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 0, 20, 0 ),
+            child:TextButton(
+            style: ButtonStyle(
+              padding:MaterialStateProperty.all(EdgeInsets.all(10)),
+              foregroundColor: MaterialStateProperty.all<Color>(Colors.black),
+              backgroundColor: MaterialStateProperty.all<Color>(Color.fromARGB(255, 224, 223, 223)),
+              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15.0),      
+                )
+              ),
+            ),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) =>  landing()),
+              );
+            },
+            child: const Text('Life events'),
+          ),
+          ),
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 0, 0, 0 ),
+            child:TextButton(
+            style: ButtonStyle(
+              padding:MaterialStateProperty.all(EdgeInsets.all(10)),
+              foregroundColor: MaterialStateProperty.all<Color>(Colors.black),
+              backgroundColor: MaterialStateProperty.all<Color>(Color.fromARGB(255, 224, 223, 223)),
+              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15.0),      
+                )
+              ),
+            ),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) =>  landing()),
+              );
+            },
+            child: const Text('Music'),
+          ),
+          ),
+        ],
+      ),
+      Divider(
+        height: 30,
+        thickness: 10,
+      ),
+      Row( //ROW Five
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+
+          Stack(
+            alignment: const Alignment(0.9, 0.9),
+            children: [
+              const CircleAvatar(
+                backgroundImage: AssetImage('assets/images/facebook_logo.png'),
+                radius: 25,
+                
+              ),
+            ]
+          ),
+          Container(
+            child:Text("SUNO TV, posted a video to playlist \nBreaking News - March 2023",
+                style: TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w400,
+                  color: Colors.black,
+                ),
+            ),
+          ),
+          Container( 
+            child: Icon(
+              Icons.more_horiz_outlined,
+              color: Colors.black,
+              size: 34,
+            ),  
+          ),
+          Container( 
+            child: Icon(
+              Icons.close,
+              color: Colors.black,
+              size: 34,
+            ),  
           ),
         ],
       ),
