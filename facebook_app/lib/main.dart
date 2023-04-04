@@ -23,6 +23,9 @@ import 'categories.dart';
 import 'notification.dart';
 import 'search_videos.dart';
 import 'market_search.dart';
+import 'profile.dart';
+import 'setting.dart';
+import 'pages.dart';
 
 void main() {
   runApp(MaterialApp(

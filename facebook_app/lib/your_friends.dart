@@ -1,6 +1,7 @@
 import 'package:facebook_app/landing.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'profile.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -46,9 +47,14 @@ class your_friends extends StatelessWidget {
 
             Container(
               margin: EdgeInsets.fromLTRB(0, 0, 0, 0 ),
-              child: Icon(
-                Icons.search,
-                color: Colors.black,
+              child: IconButton(
+                onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) =>  profile()),
+              );
+            },
+            icon: Icon(Icons.search, size: 34)
               ),
             ),
           ],

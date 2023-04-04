@@ -8,6 +8,7 @@ import 'gaming.dart';
 import 'reels.dart';
 import 'market.dart';
 import 'notification.dart';
+import 'setting.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -27,7 +28,7 @@ class landing extends StatelessWidget {
           Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
-          SizedBox(height: 50,),
+          SizedBox(height: 49,),
            Container(
             margin: EdgeInsets.fromLTRB(0, 50, 70, 20 ),
             child:Text("facebook",
@@ -61,9 +62,14 @@ class landing extends StatelessWidget {
           Container(
             margin: EdgeInsets.fromLTRB(0, 50, 0, 20 ),
             child:CircleAvatar(backgroundColor: Color.fromARGB(255, 224, 223, 223),
-              child: Icon(
-                Icons.messenger,
-                color: Colors.black,
+              child: IconButton(
+                onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) =>  setting()),
+              );
+            },
+            icon: Icon(Icons.messenger, size: 34)
                 ),
               ),
           ),
