@@ -1,3 +1,4 @@
+import 'package:facebook_app/menu.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:sticky_headers/sticky_headers.dart';
@@ -132,10 +133,14 @@ class landing extends StatelessWidget {
             ),  
           ),
           Container( 
-            child: Icon(
-              Icons.menu,
-              color: Colors.black,
-              size: 34,
+            child: IconButton(
+              onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) =>  menu()),
+              );
+            },
+            icon: Icon(Icons.menu, size: 34)
             ),  
           ),
         ],

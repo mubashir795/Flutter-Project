@@ -116,9 +116,14 @@ Row( //ROW TWO
           Container(
             margin: EdgeInsets.fromLTRB(0, 0, 0, 10 ),
             child:CircleAvatar(backgroundColor: Color.fromARGB(255, 224, 223, 223),
-              child: Icon(
-                Icons.person,
-                color: Colors.black,
+              child: IconButton(
+                onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) =>  search_videos()),
+                );
+              },
+              icon: Icon(Icons.person, size: 34, color: Colors.black,)
                 ),
               ),
           ),
