@@ -1,3 +1,4 @@
+import 'package:facebook_app/calls.dart';
 import 'package:facebook_app/create_post.dart';
 import 'package:facebook_app/menu.dart';
 import 'package:flutter/material.dart';
@@ -11,6 +12,7 @@ import 'reels.dart';
 import 'market.dart';
 import 'notification.dart';
 import 'setting.dart';
+import 'messenger_setting.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -45,9 +47,15 @@ class landing extends StatelessWidget {
           Container(
             margin: EdgeInsets.fromLTRB(0, 50, 0, 20 ),
             child:CircleAvatar(backgroundColor: Color.fromARGB(255, 224, 223, 223),
-              child: Icon(
-                Icons.add,
-                color: Colors.black,
+              child: IconButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) =>  messenger_setting()),
+                  );
+                },
+                icon: Icon(Icons.add)
+                
                 ),
               ),
           ),
@@ -55,9 +63,14 @@ class landing extends StatelessWidget {
           Container(
             margin: EdgeInsets.fromLTRB(0, 50, 0, 20 ),
             child:CircleAvatar(backgroundColor: Color.fromARGB(255, 224, 223, 223),
-              child: Icon(
-                Icons.search,
-                color: Colors.black,
+              child: IconButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) =>  calls()),
+                  );
+                },
+                icon: Icon(Icons.search)
                 ),
               ),
           ),
