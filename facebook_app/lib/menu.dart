@@ -1,4 +1,5 @@
 import 'package:facebook_app/landing.dart';
+import 'package:facebook_app/privacy.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -278,9 +279,15 @@ class menu extends StatelessWidget {
                   children: [
                     Container(
                       margin: EdgeInsets.fromLTRB(0, 0, 0, 0 ),
-                      child: Icon(
-                        Icons.settings,
-                        color: Colors.black,
+                      child: IconButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) =>  privacy()),
+                          );
+                        },
+                        icon: Icon(Icons.settings)
+                        
                       ),
                     ),
                     Container(

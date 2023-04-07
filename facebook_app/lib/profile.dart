@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'suggestion.dart';
 import 'landing.dart';
+import 'about.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -230,14 +231,20 @@ class profile extends StatelessWidget {
         children: <Widget>[
           Container(
             margin: EdgeInsets.fromLTRB(0, 20, 0, 0 ),
-              child: Icon(
-                Icons.work,
-                color: Colors.black,
+              child: IconButton(
+                onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) =>  about()),
+              );
+            },
+            icon: Icon(Icons.work)
+                
                 ),
               
           ),
           Container(
-            margin: EdgeInsets.fromLTRB(0, 20, 200, 0 ),
+            margin: EdgeInsets.fromLTRB(0, 20, 190, 0 ),
             child:Text("Web Application Develper",
                 style: TextStyle(
                   fontSize: 15,

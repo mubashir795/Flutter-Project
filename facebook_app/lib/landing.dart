@@ -1,3 +1,4 @@
+import 'package:facebook_app/create_post.dart';
 import 'package:facebook_app/menu.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -176,10 +177,15 @@ class landing extends StatelessWidget {
             ), 
           ),
           Container( 
-            child: Icon(
-              Icons.photo_library,
-              color: Colors.green,
-              size: 34,
+            child: IconButton(
+              onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) =>  create_post()),
+              );
+            },
+              icon:Icon(Icons.photo_library), 
+              
             ),  
           ),
         ],
