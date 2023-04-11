@@ -1,3 +1,4 @@
+import 'package:facebook_app/chat.dart';
 import 'package:facebook_app/landing.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -66,9 +67,14 @@ class calls extends StatelessWidget {
             Container(
               margin: EdgeInsets.fromLTRB(0, 0, 0, 0 ),
               child:CircleAvatar(backgroundColor: Color.fromARGB(255, 224, 223, 223),
-                child: Icon(
-                  Icons.video_call,
-                  color: Colors.black,
+                child: IconButton(
+                  onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) =>  chat()),
+                      );
+                    },
+                    icon:Icon(Icons.video_call),
                   ),
                 ),
             ),

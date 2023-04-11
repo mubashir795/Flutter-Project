@@ -50,7 +50,7 @@ class about extends StatelessWidget {
 
         Divider(
         height: 30,
-        thickness: 2,
+        thickness: 1,
       ),
       Container(
         margin: EdgeInsets.fromLTRB(0, 0, 350, 20 ),

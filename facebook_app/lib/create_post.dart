@@ -1,3 +1,4 @@
+import 'package:facebook_app/feeling.dart';
 import 'package:facebook_app/landing.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -164,9 +165,14 @@ Row( //ROW Five
         children: <Widget>[
           Container(
             margin: EdgeInsets.fromLTRB(0, 0, 0, 0 ),
-            child: Icon(
-              Icons.emoji_emotions_outlined,
-              color: Colors.orange,
+            child: IconButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) =>  feeling()),
+                );
+              },
+              icon:Icon(Icons.emoji_emotions_outlined),
             ),
           ),
           Container(
