@@ -1,4 +1,6 @@
+import 'package:facebook_app/ads.dart';
 import 'package:facebook_app/landing.dart';
+import 'package:facebook_app/order.dart';
 import 'package:facebook_app/privacy.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -37,9 +39,14 @@ class menu extends StatelessWidget {
                 Container(
                   margin: EdgeInsets.fromLTRB(0, 0, 0, 0 ),
                   child:CircleAvatar(backgroundColor: Color.fromARGB(255, 224, 223, 223),
-                    child: Icon(
-                      Icons.settings,
-                      color: Colors.black,
+                    child: IconButton(
+                      onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) =>  order()),
+                          );
+                        },
+                        icon: Icon(Icons.settings, size: 34, color: Colors.black,)
                       ),
                     ),
                 ),
@@ -317,9 +324,14 @@ class menu extends StatelessWidget {
                     Container(
                       padding: const EdgeInsets.fromLTRB(30, 0, 30, 0 ),
                       margin: EdgeInsets.fromLTRB(0, 0, 0, 0 ),
-                      child: Icon(
-                        Icons.settings,
-                        color: Colors.black,
+                      child: IconButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) =>  ads()),
+                          );
+                        },
+                        icon: Icon(Icons.settings)
                       ),
                     ),
                     Container(
