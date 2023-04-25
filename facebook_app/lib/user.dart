@@ -1,4 +1,6 @@
+import 'package:facebook_app/follow.dart';
 import 'package:facebook_app/landing.dart';
+import 'package:facebook_app/user_setting.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -174,9 +176,14 @@ class user extends StatelessWidget {
                     Container(
                       padding: const EdgeInsets.fromLTRB(30, 0, 30, 0 ),
                       margin: EdgeInsets.fromLTRB(0, 0, 0, 0 ),
-                      child: Icon(
-                        Icons.settings,
-                        color: Colors.black,
+                      child: IconButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) =>  follow()),
+                          );
+                        },
+                        icon: Icon(Icons.settings)
                       ),
                     ),
                     Container(
@@ -207,9 +214,14 @@ class user extends StatelessWidget {
                     Container(
                       padding: const EdgeInsets.fromLTRB(0, 0, 0, 0 ),
                       margin: EdgeInsets.fromLTRB(0, 0, 0, 0 ),
-                      child: Icon(
-                        Icons.settings,
-                        color: Colors.black,
+                      child: IconButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) =>  user_setting()),
+                          );
+                        },
+                        icon: Icon(Icons.settings)
                       ),
                     ),
                     Container(

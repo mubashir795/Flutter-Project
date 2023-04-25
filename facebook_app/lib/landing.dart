@@ -84,7 +84,7 @@ class landing extends StatelessWidget {
                 MaterialPageRoute(builder: (context) =>  setting()),
               );
             },
-            icon: Icon(Icons.messenger, size: 34)
+            icon: Icon(Icons.messenger)
                 ),
               ),
           ),

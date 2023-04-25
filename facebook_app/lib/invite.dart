@@ -1,4 +1,4 @@
-import 'package:facebook_app/invite.dart';
+import 'package:facebook_app/fundriser.dart';
 import 'package:facebook_app/landing.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -7,11 +7,11 @@ import 'profile.dart';
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: like_page(),
+    home: invite(),
   ));
 
 }
-class like_page extends StatelessWidget {
+class invite extends StatelessWidget {
 
   @override
  Widget build(BuildContext context) {
@@ -36,8 +36,8 @@ class like_page extends StatelessWidget {
                 ),
             ),
             Container(
-              margin: EdgeInsets.fromLTRB(0, 0, 210, 0 ),
-              child:Text("Liked Pages",
+              margin: EdgeInsets.fromLTRB(0, 0, 260, 0 ),
+              child:Text("invites",
                   style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.w500,
@@ -51,7 +51,7 @@ class like_page extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) =>  invite()),
+                    MaterialPageRoute(builder: (context) =>  fundriser()),
                   );
                 },
                 icon: Icon(Icons.search)
@@ -68,7 +68,7 @@ class like_page extends StatelessWidget {
           children: <Widget>[
             Container(
         margin: EdgeInsets.fromLTRB(0, 0, 160, 0 ),
-        child:Text("Changes to Pages",
+        child:Text("Pendig invites",
             style: TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.w500,
@@ -87,16 +87,6 @@ class like_page extends StatelessWidget {
         ),
       ),
           ],
-      ),
-      Container(
-        margin: EdgeInsets.fromLTRB(0, 10, 0, 10 ),
-        child:Text("These Pages have changed their name since you liked\n them. When a Page makes these changes, that could\n mean that it changes what it posts about. You can\n decide if you want to stay connected to these Pages.",
-            style: TextStyle(
-              fontSize: 15,
-              fontWeight: FontWeight.w300,
-              color: Colors.grey,
-            ),
-        ),
       ),
       Row( //ROW FIve
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -125,13 +115,6 @@ class like_page extends StatelessWidget {
               ),
             ),
           ),
-          Container( 
-            child: Icon(
-              Icons.more_horiz_outlined,
-              color: Colors.black,
-              size: 34,
-            ),  
-          ),
         ],
       ),
       Row(
@@ -143,7 +126,7 @@ class like_page extends StatelessWidget {
                 backgroundColor: Colors.blue,
                 textStyle: const TextStyle(fontSize: 14)),
             onPressed: () {},
-            child: const Text('Send message'),
+            child: const Text('Like'),
           ),
           TextButton(
             style: TextButton.styleFrom(
@@ -153,7 +136,7 @@ class like_page extends StatelessWidget {
             onPressed: () {
             
           },
-            child: const Text('See 3 Changes'),
+            child: const Text('Decline'),
           ),
         ],
       ),
@@ -188,13 +171,6 @@ class like_page extends StatelessWidget {
               ),
             ),
           ),
-          Container( 
-            child: Icon(
-              Icons.more_horiz_outlined,
-              color: Colors.black,
-              size: 34,
-            ),  
-          ),
         ],
       ),
       Row(
@@ -206,7 +182,7 @@ class like_page extends StatelessWidget {
                 backgroundColor: Colors.blue,
                 textStyle: const TextStyle(fontSize: 14)),
             onPressed: () {},
-            child: const Text('Send message'),
+            child: const Text('Like'),
           ),
           TextButton(
             style: TextButton.styleFrom(
@@ -216,13 +192,38 @@ class like_page extends StatelessWidget {
             onPressed: () {
             
           },
-            child: const Text('See 3 Changes'),
+            child: const Text('Decline'),
           ),
         ],
       ),
        Divider(
         height: 30,
         thickness: 1,
+      ),
+      Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: <Widget>[
+            Container(
+        margin: EdgeInsets.fromLTRB(0, 0, 160, 0 ),
+        child:Text("Suggested Pages",
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.w500,
+              color: Colors.black,
+            ),
+        ),
+      ),
+      Container(
+        margin: EdgeInsets.fromLTRB(0, 0, 0, 0 ),
+        child:Text("See All",
+            style: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.w300,
+              color: Colors.blue,
+            ),
+        ),
+      ),
+          ],
       ),
       Row( //ROW FIve
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -251,13 +252,6 @@ class like_page extends StatelessWidget {
               ),
             ),
           ),
-          Container( 
-            child: Icon(
-              Icons.more_horiz_outlined,
-              color: Colors.black,
-              size: 34,
-            ),  
-          ),
         ],
       ),
       Row(
@@ -269,7 +263,7 @@ class like_page extends StatelessWidget {
                 backgroundColor: Colors.blue,
                 textStyle: const TextStyle(fontSize: 14)),
             onPressed: () {},
-            child: const Text('Send message'),
+            child: const Text('Like'),
           ),
           TextButton(
             style: TextButton.styleFrom(
@@ -279,7 +273,7 @@ class like_page extends StatelessWidget {
             onPressed: () {
             
           },
-            child: const Text('See 3 Changes'),
+            child: const Text('Decline'),
           ),
         ],
       ),
@@ -314,13 +308,6 @@ class like_page extends StatelessWidget {
               ),
             ),
           ),
-          Container( 
-            child: Icon(
-              Icons.more_horiz_outlined,
-              color: Colors.black,
-              size: 34,
-            ),  
-          ),
         ],
       ),
       Row(
@@ -332,7 +319,7 @@ class like_page extends StatelessWidget {
                 backgroundColor: Colors.blue,
                 textStyle: const TextStyle(fontSize: 14)),
             onPressed: () {},
-            child: const Text('Send message'),
+            child: const Text('Like'),
           ),
           TextButton(
             style: TextButton.styleFrom(
@@ -342,7 +329,7 @@ class like_page extends StatelessWidget {
             onPressed: () {
             
           },
-            child: const Text('See 3 Changes'),
+            child: const Text('Decline'),
           ),
         ],
       ),

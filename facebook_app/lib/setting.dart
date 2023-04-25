@@ -1,3 +1,5 @@
+import 'package:facebook_app/access_control.dart';
+import 'package:facebook_app/facebook_activity.dart';
 import 'package:facebook_app/landing.dart';
 import 'package:facebook_app/pages.dart';
 import 'package:flutter/material.dart';
@@ -232,9 +234,14 @@ class setting extends StatelessWidget {
           Container(
             margin: EdgeInsets.fromLTRB(0, 20, 0, 0 ),
             child:CircleAvatar(backgroundColor: Color.fromARGB(255, 224, 223, 223),
-              child: Icon(
-                Icons.event_seat,
-                color: Colors.black,
+              child: IconButton(
+                    onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) =>  facebook_activity()),
+                    );
+                  },
+                  icon: Icon(Icons.event_seat,color: Colors.black)
                 ),
               ),
           ),
@@ -257,9 +264,14 @@ class setting extends StatelessWidget {
           Container(
             margin: EdgeInsets.fromLTRB(0, 20, 0, 0 ),
             child:CircleAvatar(backgroundColor: Color.fromARGB(255, 224, 223, 223),
-              child: Icon(
-                Icons.phone_android,
-                color: Colors.black,
+                child: IconButton(
+                    onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) =>  access_control()),
+                    );
+                  },
+                  icon: Icon(Icons.phone_android, color: Colors.black)
                 ),
               ),
           ),
