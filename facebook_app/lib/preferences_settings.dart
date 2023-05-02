@@ -11,11 +11,11 @@ import 'your_friends.dart';
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: ads(),
+    home: preferences_settings(),
   ));
 
 }
-class ads extends StatelessWidget {
+class preferences_settings extends StatelessWidget {
 
   @override
  Widget build(BuildContext context) {
@@ -111,7 +111,7 @@ class ads extends StatelessWidget {
             style: ButtonStyle(
               padding:MaterialStateProperty.all(EdgeInsets.all(10)),
               foregroundColor: MaterialStateProperty.all<Color>(Colors.black),
-              backgroundColor: MaterialStateProperty.all<Color>(Color.fromARGB(255, 224, 223, 223)),
+              backgroundColor: MaterialStateProperty.all<Color>(Color.fromARGB(255, 103, 177, 251)),
               shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                 RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(18.0),      
@@ -139,12 +139,22 @@ class ads extends StatelessWidget {
         children: <Widget>[
           SizedBox(height: 50,),
           Container(
-            margin: EdgeInsets.fromLTRB(0, 0, 60, 10 ),
-            child:Text("Advertiser You've Seen Most Recently",
+            margin: EdgeInsets.fromLTRB(0, 0, 130, 10 ),
+            child:Text("Common Questions",
                 style: TextStyle(
                   fontSize: 17,
                   fontWeight: FontWeight.w600,
                   color: Colors.black,
+                ),
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 0, 0, 10 ),
+            child:Text("Learn more",
+                style: TextStyle(
+                  fontSize: 13,
+                  fontWeight: FontWeight.w400,
+                  color: Colors.blue,
                 ),
             ),
           ),
@@ -155,193 +165,46 @@ class ads extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
           
-          Stack(
-            alignment: const Alignment(0.6, 0.6),
-            children: [
-              const CircleAvatar(
-                backgroundImage: AssetImage('assets/images/current.jpeg'),
-                radius: 20,
-                
-              ),
-            ]
-          ),
           Container(
-            margin: EdgeInsets.fromLTRB(0, 0, 130, 0 ),
-            child:Text("The Current",
-              style: TextStyle(
-                fontSize: 14,
-                fontWeight: FontWeight.w400,
+            margin: EdgeInsets.fromLTRB(0, 10, 300, 0 ),
+            child:CircleAvatar(backgroundColor: Color.fromARGB(255, 224, 223, 223),
+              child: Icon(
+                Icons.help,
                 color: Colors.black,
-                // backgroundColor: Color.fromARGB(255, 213, 212, 212),
+                ),
               ),
-            ),
-          ),
-          Container(
-            margin: EdgeInsets.fromLTRB(0, 0, 0, 0 ),
-            child:TextButton(
-            style: TextButton.styleFrom(
-                foregroundColor: Colors.black,
-                backgroundColor: Color.fromARGB(255, 224, 223, 223),
-                textStyle: const TextStyle(fontSize: 14)),
-            onPressed: () {},
-            child: const Text('Hide Ads'),
-          ),
           ),
         ],
       ),
-      SizedBox(height: 20,),
-      Row( //ROW Seven
+      Row( //ROW TWO
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
-          
-          Stack(
-            alignment: const Alignment(0.6, 0.6),
-            children: [
-              const CircleAvatar(
-                backgroundImage: AssetImage('assets/images/suno.jpeg'),
-                radius: 20,
-                
-              ),
-            ]
-          ),
+          SizedBox(height: 50,),
           Container(
-            margin: EdgeInsets.fromLTRB(0, 0, 160, 0 ),
-            child:Text("Suno Tv",
-              style: TextStyle(
-                fontSize: 14,
-                fontWeight: FontWeight.w400,
-                color: Colors.black,
-                // backgroundColor: Color.fromARGB(255, 213, 212, 212),
-              ),
+            margin: EdgeInsets.fromLTRB(0, 0, 80, 0 ),
+            child:Text("What information is used to show me ads?",
+                style: TextStyle(
+                  fontSize: 13,
+                  fontWeight: FontWeight.w700,
+                  color: Colors.black,
+                ),
             ),
-          ),
-          Container(
-            margin: EdgeInsets.fromLTRB(0, 0, 0, 0 ),
-            child:TextButton(
-            style: TextButton.styleFrom(
-                foregroundColor: Colors.black,
-                backgroundColor: Color.fromARGB(255, 224, 223, 223),
-                textStyle: const TextStyle(fontSize: 14)),
-            onPressed: () {},
-            child: const Text('Hide Ads'),
-          ),
           ),
         ],
       ),
-      SizedBox(height: 20,),
-      Row( //ROW Seven
+      Row( //ROW TWO
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
-          
-          Stack(
-            alignment: const Alignment(0.6, 0.6),
-            children: [
-              const CircleAvatar(
-                backgroundImage: AssetImage('assets/images/ary.png'),
-                radius: 20,
-                
-              ),
-            ]
-          ),
-          Container(
-            margin: EdgeInsets.fromLTRB(0, 0, 140, 0 ),
-            child:Text("ARY News",
-              style: TextStyle(
-                fontSize: 14,
-                fontWeight: FontWeight.w400,
-                color: Colors.black,
-                // backgroundColor: Color.fromARGB(255, 213, 212, 212),
-              ),
-            ),
-          ),
+          SizedBox(height: 50,),
           Container(
             margin: EdgeInsets.fromLTRB(0, 0, 0, 0 ),
-            child:TextButton(
-            style: TextButton.styleFrom(
-                foregroundColor: Colors.black,
-                backgroundColor: Color.fromARGB(255, 224, 223, 223),
-                textStyle: const TextStyle(fontSize: 14)),
-            onPressed: () {},
-            child: const Text('Hide Ads'),
-          ),
-          ),
-        ],
-      ),
-      SizedBox(height: 20,),
-      Row( //ROW Seven
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: <Widget>[
-          
-          Stack(
-            alignment: const Alignment(0.6, 0.6),
-            children: [
-              const CircleAvatar(
-                backgroundImage: AssetImage('assets/images/pcb.png'),
-                radius: 20,
-                
-              ),
-            ]
-          ),
-          Container(
-            margin: EdgeInsets.fromLTRB(0, 0, 70, 0 ),
-            child:Text("Pakistan Cricket Board",
-              style: TextStyle(
-                fontSize: 14,
-                fontWeight: FontWeight.w400,
-                color: Colors.black,
-                // backgroundColor: Color.fromARGB(255, 213, 212, 212),
-              ),
+            child:Text("We show you ads based on information we have\nabout you and your activity, such as Pages you and your\nfriends like, information from your Facebook\nand Instagram profile,the content you create or interact\nwith across Facebook.We may also use information we have\nabout others and their activity to show you more relevant\nads. If personalised\nads based on data about your activity from partners are\nallowed, we can also use data like your activity on websites\noff of Facebook to decide which ads show you.",
+                style: TextStyle(
+                  fontSize: 13,
+                  fontWeight: FontWeight.w300,
+                  color: Colors.black,
+                ),
             ),
-          ),
-          Container(
-            margin: EdgeInsets.fromLTRB(0, 0, 0, 0 ),
-            child:TextButton(
-            style: TextButton.styleFrom(
-                foregroundColor: Colors.black,
-                backgroundColor: Color.fromARGB(255, 224, 223, 223),
-                textStyle: const TextStyle(fontSize: 14)),
-            onPressed: () {},
-            child: const Text('Hide Ads'),
-          ),
-          ),
-        ],
-      ),
-      SizedBox(height: 20,),
-      Row( //ROW Seven
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: <Widget>[
-          
-          Stack(
-            alignment: const Alignment(0.6, 0.6),
-            children: [
-              const CircleAvatar(
-                backgroundImage: AssetImage('assets/images/three.jpeg'),
-                radius: 20,
-                
-              ),
-            ]
-          ),
-          Container(
-            margin: EdgeInsets.fromLTRB(0, 0, 100, 0 ),
-            child:Text("Mubashar Lateef",
-              style: TextStyle(
-                fontSize: 14,
-                fontWeight: FontWeight.w400,
-                color: Colors.black,
-                // backgroundColor: Color.fromARGB(255, 213, 212, 212),
-              ),
-            ),
-          ),
-          Container(
-            margin: EdgeInsets.fromLTRB(0, 0, 0, 0 ),
-            child:TextButton(
-            style: TextButton.styleFrom(
-                foregroundColor: Colors.black,
-                backgroundColor: Color.fromARGB(255, 224, 223, 223),
-                textStyle: const TextStyle(fontSize: 14)),
-            onPressed: () {},
-            child: const Text('Hide Ads'),
-          ),
           ),
         ],
       ),
@@ -368,7 +231,7 @@ class ads extends StatelessWidget {
                 MaterialPageRoute(builder: (context) =>  location()),
               );
             },
-            child: const Text('See more'),
+            child: const Text('See all'),
           ),
           ),
         ],
@@ -376,6 +239,22 @@ class ads extends StatelessWidget {
       Divider(
         height: 29,
         thickness: 2,
+      ),
+      Row( //ROW TWO
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          SizedBox(height: 50,),
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 0, 80, 10 ),
+            child:Text("Manage Data Ssed to Show You Ads.",
+                style: TextStyle(
+                  fontSize: 17,
+                  fontWeight: FontWeight.w600,
+                  color: Colors.black,
+                ),
+            ),
+          ),
+        ],
       ),
       Row( //ROW SIX
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -390,11 +269,11 @@ class ads extends StatelessWidget {
               ),
           ),
           Container(
-            margin: EdgeInsets.fromLTRB(0, 10, 80, 0 ),
-            child:Text("Advertiser you've hidden",
+            margin: EdgeInsets.fromLTRB(0, 10, 0, 0 ),
+            child:Text("Activity information from ad partners",
                 style: TextStyle(
-                  fontSize: 15,
-                  fontWeight: FontWeight.w300,
+                  fontSize: 13,
+                  fontWeight: FontWeight.w600,
                   color: Colors.black,
                   // backgroundColor: Color.fromARGB(255, 213, 212, 212),
                 ),
@@ -406,7 +285,7 @@ class ads extends StatelessWidget {
                 onPressed: (){
                   Navigator.pop(context);
                 },
-                icon:Icon(Icons.arrow_forward), 
+                icon:Icon(Icons.arrow_forward_ios), 
                 //replace with our own icon data.
             ),
           ),
@@ -419,17 +298,17 @@ class ads extends StatelessWidget {
             margin: EdgeInsets.fromLTRB(0, 10, 0, 0 ),
             child:CircleAvatar(backgroundColor: Color.fromARGB(255, 224, 223, 223),
               child: Icon(
-                Icons.help,
+                Icons.person,
                 color: Colors.black,
                 ),
               ),
           ),
           Container(
-            margin: EdgeInsets.fromLTRB(0, 10, 5, 0 ),
-            child:Text("Advertiser whose ads you've clicked",
+            margin: EdgeInsets.fromLTRB(0, 10, 50, 0 ),
+            child:Text("Categories used to reach you ",
                 style: TextStyle(
-                  fontSize: 15,
-                  fontWeight: FontWeight.w300,
+                  fontSize: 13,
+                  fontWeight: FontWeight.w600,
                   color: Colors.black,
                   // backgroundColor: Color.fromARGB(255, 213, 212, 212),
                 ),
@@ -441,7 +320,77 @@ class ads extends StatelessWidget {
                 onPressed: (){
                   Navigator.pop(context);
                 },
-                icon:Icon(Icons.arrow_forward), 
+                icon:Icon(Icons.arrow_forward_ios), 
+                //replace with our own icon data.
+            ),
+          ),
+        ],
+      ),
+      Row( //ROW SIX
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 10, 0, 0 ),
+            child:CircleAvatar(backgroundColor: Color.fromARGB(255, 224, 223, 223),
+              child: Icon(
+                Icons.hide_source_rounded,
+                color: Colors.black,
+                ),
+              ),
+          ),
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 10, 60, 0 ),
+            child:Text("Audience-based advertising",
+                style: TextStyle(
+                  fontSize: 13,
+                  fontWeight: FontWeight.w600,
+                  color: Colors.black,
+                  // backgroundColor: Color.fromARGB(255, 213, 212, 212),
+                ),
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 10, 0, 0 ),
+            child: IconButton(
+                onPressed: (){
+                  Navigator.pop(context);
+                },
+                icon:Icon(Icons.arrow_forward_ios), 
+                //replace with our own icon data.
+            ),
+          ),
+        ],
+      ),
+      Row( //ROW SIX
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 10, 0, 0 ),
+            child:CircleAvatar(backgroundColor: Color.fromARGB(255, 224, 223, 223),
+              child: Icon(
+                Icons.hide_source_rounded,
+                color: Colors.black,
+                ),
+              ),
+          ),
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 10, 60, 0 ),
+            child:Text("Ads shown outside of Meta",
+                style: TextStyle(
+                  fontSize: 13,
+                  fontWeight: FontWeight.w600,
+                  color: Colors.black,
+                  // backgroundColor: Color.fromARGB(255, 213, 212, 212),
+                ),
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 10, 0, 0 ),
+            child: IconButton(
+                onPressed: (){
+                  Navigator.pop(context);
+                },
+                icon:Icon(Icons.arrow_forward_ios), 
                 //replace with our own icon data.
             ),
           ),
