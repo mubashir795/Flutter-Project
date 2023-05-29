@@ -85,6 +85,7 @@ flutter:
     - assets/images/icc.jpeg
     - assets/images/ary2.jpeg
     - assets/images/legacy.jpeg
+    - assets/images/memories.png
    
 
   # An image asset can refer to one or more resolution-specific "variants", see 

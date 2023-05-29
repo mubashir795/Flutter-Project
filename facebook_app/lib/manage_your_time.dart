@@ -1,4 +1,5 @@
 import 'package:facebook_app/landing.dart';
+import 'package:facebook_app/manage_future_activity.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -87,9 +88,14 @@ class manage_your_time extends StatelessWidget {
               Container(
                 margin: EdgeInsets.fromLTRB(10, 0, 0, 0 ),
                 child:CircleAvatar(backgroundColor: Color.fromARGB(255, 224, 223, 223),
-                  child: Icon(
-                    Icons.lock_clock,
-                    color: Colors.black,
+                  child: IconButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) =>  manage_future_activity()),
+                      );
+                    },
+                    icon: Icon(Icons.lock_clock, color: Colors.black,)
                     ),
                   ),
               ),
